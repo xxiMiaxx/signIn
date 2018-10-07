@@ -4,15 +4,30 @@
 //
 //  Created by Arwa Hamed on 15/01/1440 AH.
 //  Copyright © 1440 Arwa Hamed. All rights reserved.
-//
+// arwa
+// arwa Hamed
 
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
+
+
+
+
 
 
 
 class ViewController: UIViewController {
+    
+   //new
+   // var tableView:UITableView!
+    
+    var ref: DatabaseReference!
+
+    
+    
+    
     
     
     @IBOutlet weak var signInSelector: UISegmentedControl!
@@ -40,6 +55,21 @@ class ViewController: UIViewController {
         
         confirmPassTextField.isHidden=true
         confirmPassLable.isHidden=true
+        
+        /*/new
+        super.viewDidLoad()
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView.backgroundColor = UIColor.blue
+        view.addSubview(tableView)
+        
+        var layoutGuide:UILayoutGuide!
+        layoutGuide=view.safeAreaLayoutGuide
+        */
+        
+        //new
+       // ref = Database.database().reference();
+       // self.ref.child("rest").childByAutoId().setValue("shahad")
+    
         
     }
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,34 @@
 		2A8F2707215ACBFA0068D3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F2706215ACBFA0068D3EE /* Assets.xcassets */; };
 		2A8F270A215ACBFA0068D3EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F2708215ACBFA0068D3EE /* LaunchScreen.storyboard */; };
 		2A8F2712215ACD480068D3EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F2711215ACD480068D3EE /* GoogleService-Info.plist */; };
-		DF619F000BED62ECF3013F74 /* Pods_signIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9EAA3B662E31FA6FB9FBDD /* Pods_signIn.framework */; };
+		2AB1D825215FB78F00901D74 /* Pods_signIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9EAA3B662E31FA6FB9FBDD /* Pods_signIn.framework */; };
+		2AB1D826215FB78F00901D74 /* Pods_signIn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9EAA3B662E31FA6FB9FBDD /* Pods_signIn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2AE49FAB2163BE3800F0B112 /* Pods_signIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE49FAA2163BE3800F0B112 /* Pods_signIn.framework */; };
+		2AE49FAC2163BE3800F0B112 /* Pods_signIn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE49FAA2163BE3800F0B112 /* Pods_signIn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2AE49FC1216412A500F0B112 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FBF216412A500F0B112 /* PostTableViewCell.swift */; };
+		2AE49FC2216412A500F0B112 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE49FC0216412A500F0B112 /* PostTableViewCell.xib */; };
+		2AE49FC8216421EE00F0B112 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FC7216421EE00F0B112 /* StoreViewController.swift */; };
+		2AE49FCB21642B6C00F0B112 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FCA21642B6C00F0B112 /* Post.swift */; };
+		2AE49FCF2164AA0B00F0B112 /* storeProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FCE2164AA0B00F0B112 /* storeProfile.swift */; };
+		2AE49FD12164AB2A00F0B112 /* storeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD02164AB2A00F0B112 /* storeService.swift */; };
+		2AE49FD3216741D400F0B112 /* StoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */; };
+		2AE49FD52167814200F0B112 /* SubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD42167814200F0B112 /* SubTableViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2AB1D827215FB78F00901D74 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2AB1D826215FB78F00901D74 /* Pods_signIn.framework in Embed Frameworks */,
+				2AE49FAC2163BE3800F0B112 /* Pods_signIn.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F9EAA3B662E31FA6FB9FBDD /* Pods_signIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +52,15 @@
 		2A8F2709215ACBFA0068D3EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A8F270B215ACBFA0068D3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A8F2711215ACD480068D3EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2AE49FAA2163BE3800F0B112 /* Pods_signIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_signIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE49FBF216412A500F0B112 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		2AE49FC0216412A500F0B112 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		2AE49FC7216421EE00F0B112 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		2AE49FCA21642B6C00F0B112 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		2AE49FCE2164AA0B00F0B112 /* storeProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeProfile.swift; sourceTree = "<group>"; };
+		2AE49FD02164AB2A00F0B112 /* storeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeService.swift; sourceTree = "<group>"; };
+		2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresTableViewController.swift; sourceTree = "<group>"; };
+		2AE49FD42167814200F0B112 /* SubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTableViewController.swift; sourceTree = "<group>"; };
 		74C04964CC472C4CEA347066 /* Pods-signIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-signIn/Pods-signIn.release.xcconfig"; sourceTree = "<group>"; };
 		DD580000FAB232D7A3200984 /* Pods-signIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-signIn/Pods-signIn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -35,7 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF619F000BED62ECF3013F74 /* Pods_signIn.framework in Frameworks */,
+				2AB1D825215FB78F00901D74 /* Pods_signIn.framework in Frameworks */,
+				2AE49FAB2163BE3800F0B112 /* Pods_signIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +81,7 @@
 		2A8F26F3215ACBF90068D3EE = {
 			isa = PBXGroup;
 			children = (
+				2AE49FAA2163BE3800F0B112 /* Pods_signIn.framework */,
 				2A8F26FE215ACBF90068D3EE /* signIn */,
 				2A8F26FD215ACBF90068D3EE /* Products */,
 				5B637830D29F48F61FA8F9F1 /* Pods */,
@@ -66,12 +103,28 @@
 				2A8F26FF215ACBF90068D3EE /* AppDelegate.swift */,
 				2A8F2701215ACBF90068D3EE /* ViewController.swift */,
 				2A8F2703215ACBF90068D3EE /* Main.storyboard */,
+				2AE49FD42167814200F0B112 /* SubTableViewController.swift */,
+				2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */,
+				2AE49FC7216421EE00F0B112 /* StoreViewController.swift */,
+				2AE49FC921642B2F00F0B112 /* Models */,
+				2AE49FBF216412A500F0B112 /* PostTableViewCell.swift */,
+				2AE49FC0216412A500F0B112 /* PostTableViewCell.xib */,
 				2A8F2706215ACBFA0068D3EE /* Assets.xcassets */,
 				2A8F2711215ACD480068D3EE /* GoogleService-Info.plist */,
 				2A8F2708215ACBFA0068D3EE /* LaunchScreen.storyboard */,
 				2A8F270B215ACBFA0068D3EE /* Info.plist */,
+				2AE49FD02164AB2A00F0B112 /* storeService.swift */,
 			);
 			path = signIn;
+			sourceTree = "<group>";
+		};
+		2AE49FC921642B2F00F0B112 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2AE49FCA21642B6C00F0B112 /* Post.swift */,
+				2AE49FCE2164AA0B00F0B112 /* storeProfile.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5B637830D29F48F61FA8F9F1 /* Pods */ = {
@@ -103,6 +156,7 @@
 				2A8F26F9215ACBF90068D3EE /* Frameworks */,
 				2A8F26FA215ACBF90068D3EE /* Resources */,
 				ADF3F12EBD61C50084BBA3EC /* [CP] Embed Pods Frameworks */,
+				2AB1D827215FB78F00901D74 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,16 +174,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Arwa Hamed";
 				TargetAttributes = {
 					2A8F26FB215ACBF90068D3EE = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 2A8F26F7215ACBF90068D3EE /* Build configuration list for PBXProject "signIn" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -152,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A8F270A215ACBFA0068D3EE /* LaunchScreen.storyboard in Resources */,
+				2AE49FC2216412A500F0B112 /* PostTableViewCell.xib in Resources */,
 				2A8F2712215ACD480068D3EE /* GoogleService-Info.plist in Resources */,
 				2A8F2707215ACBFA0068D3EE /* Assets.xcassets in Resources */,
 				2A8F2705215ACBF90068D3EE /* Main.storyboard in Resources */,
@@ -163,25 +220,26 @@
 /* Begin PBXShellScriptBuildPhase section */
 		ADF3F12EBD61C50084BBA3EC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-signIn/Pods-signIn-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-signIn/Pods-signIn-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		E5950AB47FD283D58D2F45C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -207,8 +265,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE49FD12164AB2A00F0B112 /* storeService.swift in Sources */,
+				2AE49FD3216741D400F0B112 /* StoresTableViewController.swift in Sources */,
 				2A8F2702215ACBF90068D3EE /* ViewController.swift in Sources */,
+				2AE49FCF2164AA0B00F0B112 /* storeProfile.swift in Sources */,
+				2AE49FD52167814200F0B112 /* SubTableViewController.swift in Sources */,
+				2AE49FC8216421EE00F0B112 /* StoreViewController.swift in Sources */,
 				2A8F2700215ACBF90068D3EE /* AppDelegate.swift in Sources */,
+				2AE49FC1216412A500F0B112 /* PostTableViewCell.swift in Sources */,
+				2AE49FCB21642B6C00F0B112 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,8 +407,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -352,19 +416,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD580000FAB232D7A3200984 /* Pods-signIn.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = XY62A4CTUG;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = signIn/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				INSTALL_PATH = "@rpath";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_DYLIB_INSTALL_NAME = "@rpath/libofa.0.0.0.dylib";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Users/arwahamed/Desktop/signIn/Pods/FirebaseInstanceID/Frameworks @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArwaHamed.signIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv6 i386 x86_64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -372,19 +441,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74C04964CC472C4CEA347066 /* Pods-signIn.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = XY62A4CTUG;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = signIn/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				INSTALL_PATH = "@rpath";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_DYLIB_INSTALL_NAME = "@rpath/libofa.0.0.0.dylib";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Users/arwahamed/Desktop/signIn/Pods/FirebaseInstanceID/Frameworks @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArwaHamed.signIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv6 i386 x86_64 armv7 armv7s";
 			};
 			name = Release;
 		};
