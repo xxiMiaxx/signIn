@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imq-Pl-lAz">
-                                <rect key="frame" x="58" y="23.5" width="37" height="14.5"/>
+                                <rect key="frame" x="50" y="23.5" width="37" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                             <constraint firstItem="Imq-Pl-lAz" firstAttribute="top" secondItem="nGL-99-dX0" secondAttribute="bottom" constant="2" id="Lyt-BF-7Um"/>
                             <constraint firstItem="a6N-pL-o4j" firstAttribute="leading" secondItem="1tI-dI-6dO" secondAttribute="leading" id="Pi2-G3-Rw5"/>
                             <constraint firstItem="a6N-pL-o4j" firstAttribute="top" secondItem="1tI-dI-6dO" secondAttribute="top" id="QdT-re-D6L"/>
-                            <constraint firstItem="Imq-Pl-lAz" firstAttribute="leading" secondItem="a6N-pL-o4j" secondAttribute="trailing" constant="18" id="eCR-i3-0J3"/>
+                            <constraint firstItem="Imq-Pl-lAz" firstAttribute="leading" secondItem="a6N-pL-o4j" secondAttribute="trailing" constant="10" id="eCR-i3-0J3"/>
                             <constraint firstItem="28J-cx-0Ea" firstAttribute="leading" secondItem="a6N-pL-o4j" secondAttribute="trailing" constant="8" id="fRe-Gu-CbK"/>
                             <constraint firstItem="nGL-99-dX0" firstAttribute="leading" secondItem="a6N-pL-o4j" secondAttribute="trailing" constant="8" id="gfj-rB-4w8"/>
                             <constraint firstItem="28J-cx-0Ea" firstAttribute="top" secondItem="a6N-pL-o4j" secondAttribute="bottom" constant="8" id="pIj-Wu-cA3"/>
