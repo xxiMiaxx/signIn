@@ -56,21 +56,7 @@ class ViewController: UIViewController {
         confirmPassTextField.isHidden=true
         confirmPassLable.isHidden=true
         
-        /*/new
-        super.viewDidLoad()
-        tableView = UITableView(frame: view.bounds, style: .plain)
-        tableView.backgroundColor = UIColor.blue
-        view.addSubview(tableView)
-        
-        var layoutGuide:UILayoutGuide!
-        layoutGuide=view.safeAreaLayoutGuide
-        */
-        
-        //new
-       // ref = Database.database().reference();
-       // self.ref.child("rest").childByAutoId().setValue("shahad")
-    
-        
+   
     }
 
     override func didReceiveMemoryWarning() {

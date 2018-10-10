@@ -15,7 +15,7 @@ class StoresTableViewController: UITableViewController {
     
     //nwe
     
-    let names = ["Brent Berg", "Cody Preston", "rest", "Xander Clark",
+    let names = ["Brent Berg", "Shops", "Restaurants", "Coffee Shops & Bakeries",
                  "Francis Frederick", "Carson Hopkins", "Anthony Nguyen", "Dean Franklin",
                  "Jeremy Davenport", "Rigel Bradford", "John Ball", "Zachery Norman",
                  "Valentine Lindsey", "Slade Thornton", "Jelani Dickson", "Vance Hurley",

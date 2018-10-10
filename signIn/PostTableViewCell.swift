@@ -12,8 +12,8 @@ class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     
+    @IBOutlet weak var Location: UILabel!
     @IBOutlet weak var userNameLable: UILabel!
-    
     @IBOutlet weak var postTextLable: UILabel!
     @IBOutlet weak var subtitleLable: UILabel!
     override func awakeFromNib() {
@@ -35,7 +35,8 @@ class PostTableViewCell: UITableViewCell {
         
        userNameLable.text = post.name
        subtitleLable.text = post.phone
-       postTextLable.text = ""
+     //  postTextLable.text = post.type
+     //  Location.text = post.location
         
         do {
             let data = try Data(contentsOf: post.photoURL)

@@ -75,7 +75,7 @@ class StoreViewController: UIViewController , UITableViewDelegate , UITableViewD
     
     func observePosts(){
         
-        let postRef = Database.database().reference().child("rest")
+        let postRef = Database.database().reference().child("Restaurants")
         
         postRef.observeSingleEvent(of: .value, with: { (snapshot) in
             
@@ -83,12 +83,14 @@ class StoreViewController: UIViewController , UITableViewDelegate , UITableViewD
             for child in snapshot.children {
         if  let childSnapshot = child as? DataSnapshot ,
                 let dict = childSnapshot.value as? [String:Any] ,
-                let type = dict["Type"] as? String ,
+               // let type = dict["Type"] as? String ,
                 let name = dict["name"] as? String ,
                 let photoURL = dict["photoURL"] as? String ,
+               // let location = dict["loc"] as? String ,
                 let phone = dict["phone"] as? String ,
+            
                 let url = URL(string:photoURL) {
-                let post = Post(name: name  , type: type,  photoURL: url , phone:  phone )
+            let post = Post(name: name  ,   photoURL: url , phone:  phone /*, location: location*/)
                 tempPosts.append(post)
                 }
             }
