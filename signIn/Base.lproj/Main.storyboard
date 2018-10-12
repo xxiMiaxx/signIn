@@ -291,7 +291,7 @@
         <!--Find places-->
         <scene sceneID="1Mz-Xl-3eM">
             <objects>
-                <tableViewController id="z5q-wF-Np3" customClass="SearchTableViewController" customModule="signIn" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="z5q-wF-Np3" customClass="SearchPlacesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZuF-Qt-KzK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,7 +330,7 @@
                     <navigationItem key="navigationItem" title="Find places" id="UVk-wA-xKJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="oiC-kJ-5lt">
                             <connections>
-                                <action selector="searchCancel:" destination="z5q-wF-Np3" id="GW3-Uk-EWx"/>
+                                <action selector="dismisSearch:" destination="z5q-wF-Np3" id="Yf9-gy-H75"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -363,6 +363,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="144-6k-Lwq"/>
+        <segue reference="WUY-cm-pZP"/>
     </inferredMetricsTieBreakers>
 </document>
