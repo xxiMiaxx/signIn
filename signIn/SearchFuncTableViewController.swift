@@ -82,6 +82,17 @@ class SearchFuncTableViewController: UITableViewController, UISearchResultsUpdat
             }){ (error) in print(error.localizedDescription)
                 
             }
+        }else {
+            ref.child(StringPassed).queryOrdered(byChild: "name").observe(.childAdded, with: {(snapshot) in
+                self.placesArray.append(snapshot.value as? NSDictionary)
+                //===========
+                
+                self.findplacestableviewcontroller.insertRows(at: [IndexPath(row:self.placesArray.count-1,section:0)], with: UITableView.RowAnimation.automatic)
+                
+                
+            }){ (error) in print(error.localizedDescription)
+                
+            }
         }
         
     }

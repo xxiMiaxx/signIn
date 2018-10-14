@@ -335,9 +335,7 @@
                             <outlet property="delegate" destination="z5q-wF-Np3" id="VZ2-nO-ZfI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Find places" id="UVk-wA-xKJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="oiC-kJ-5lt"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Find places" id="UVk-wA-xKJ"/>
                     <connections>
                         <outlet property="findplacestableviewcontroller" destination="ZuF-Qt-KzK" id="9HV-Y3-zwQ"/>
                     </connections>
