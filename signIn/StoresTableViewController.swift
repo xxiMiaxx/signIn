@@ -18,6 +18,7 @@ class StoresTableViewController: UITableViewController {
     let names = [ "Restaurants", "Coffee Shops & Bakeries" , "Perfumes and Beauty" ,
                   "Clothes" ,"Children Shops", "Sport" ,"Bags & Shoes","Accessories & Jewelry" ,
                   "Pharmacy & Optics" ,"Home"
+        
                  ]
     
    // @IBOutlet weak var tableView: UITableView!
