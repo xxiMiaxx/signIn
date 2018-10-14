@@ -230,7 +230,7 @@
                     <navigationItem key="navigationItem" id="av1-UX-H7k">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="PcY-6i-uwz">
                             <connections>
-                                <segue destination="zqD-rd-Vmb" kind="presentation" id="144-6k-Lwq"/>
+                                <action selector="SearchBut:" destination="qIU-ou-Z6A" id="1Lh-ad-f4A"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -305,7 +305,7 @@
         <!--Find places-->
         <scene sceneID="1Mz-Xl-3eM">
             <objects>
-                <tableViewController id="z5q-wF-Np3" customClass="SearchPlacesTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SearchFuncTableViewController" id="z5q-wF-Np3" customClass="SearchFuncTableViewController" customModule="signIn" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZuF-Qt-KzK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,6 +351,7 @@
                     <connections>
                         <outlet property="FindPlacesTableView" destination="ZuF-Qt-KzK" id="ht0-26-prX"/>
                         <outlet property="back" destination="UVk-wA-xKJ" id="6jh-E4-pL3"/>
+                        <outlet property="findplacestableviewcontroller" destination="ZuF-Qt-KzK" id="9HV-Y3-zwQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hd0-rQ-ztI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -383,7 +384,4 @@
         <image name="icons8-schedule-24" width="24" height="24"/>
         <image name="icons8-shop-department-24" width="24" height="24"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="WUY-cm-pZP"/>
-    </inferredMetricsTieBreakers>
 </document>

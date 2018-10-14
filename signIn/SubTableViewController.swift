@@ -179,6 +179,11 @@ class SubTableViewController: UITableViewController {
     }
     
 
+    @IBAction func SearchBut(_ sender: Any) {
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "SearchFuncTableViewController") as! SearchFuncTableViewController
+        myVC.StringPassed = cellName
+        navigationController?.pushViewController(myVC, animated: true)
+    }
     
     
 
