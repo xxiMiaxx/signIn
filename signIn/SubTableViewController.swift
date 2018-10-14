@@ -162,10 +162,10 @@ class SubTableViewController: UITableViewController {
                    // let type = dict["Type"] as? String ,
                     let name = dict["name"] as? String ,
                     let photoURL = dict["photoURL"] as? String ,
-                   // let location = dict["loc"] as? String ,
+                    let loc = dict["loc"] as? String ,
                     let phone = dict["phone"] as? String ,
                     let url = URL(string:photoURL) {
-                    let post = Post(name: name , photoURL: url , phone:  phone /*, location: location*/)
+                    let post = Post(name: name , photoURL: url , phone:  phone ,loc:loc)
                     tempPosts.append(post)
                 }
             }

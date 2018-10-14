@@ -35,7 +35,7 @@ class PostTableViewCell: UITableViewCell {
         
        userNameLable.text = post.name
        subtitleLable.text = post.phone
-     //  postTextLable.text = post.type
+       postTextLable.text = post.loc
      //  Location.text = post.location
         
         do {

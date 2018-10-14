@@ -83,14 +83,13 @@ class StoreViewController: UIViewController , UITableViewDelegate , UITableViewD
             for child in snapshot.children {
         if  let childSnapshot = child as? DataSnapshot ,
                 let dict = childSnapshot.value as? [String:Any] ,
-               // let type = dict["Type"] as? String ,
                 let name = dict["name"] as? String ,
                 let photoURL = dict["photoURL"] as? String ,
-               // let location = dict["loc"] as? String ,
+                let loc = dict["Gate"] as? String ,
                 let phone = dict["phone"] as? String ,
             
                 let url = URL(string:photoURL) {
-            let post = Post(name: name  ,   photoURL: url , phone:  phone /*, location: location*/)
+            let post = Post(name: name  ,   photoURL: url , phone:  phone , loc:loc)
                 tempPosts.append(post)
                 }
             }

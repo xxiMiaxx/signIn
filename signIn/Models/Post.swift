@@ -12,17 +12,17 @@ class Post {
     
     var name:String
    // var location:String
-   // var type: String
+    var loc: String
     var photoURL: URL
     var phone:String
    
     
-    init (name:String , photoURL: URL , phone:String /*, location:String*/) {
+    init (name:String , photoURL: URL , phone:String , loc: String) {
         self.name = name
-        //self.type = type
+        
         self.phone = phone
         self.photoURL = photoURL 
-       // self.location = location 
+        self.loc = loc
     }
     
     
