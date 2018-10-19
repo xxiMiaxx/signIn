@@ -26,6 +26,8 @@
 		2AE49FD12164AB2A00F0B112 /* storeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD02164AB2A00F0B112 /* storeService.swift */; };
 		2AE49FD3216741D400F0B112 /* StoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */; };
 		2AE49FD52167814200F0B112 /* SubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD42167814200F0B112 /* SubTableViewController.swift */; };
+		8D788E862179C8720039123E /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D788E852179C8720039123E /* Admin.storyboard */; };
+		8D788E882179C8860039123E /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D788E872179C8860039123E /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +66,8 @@
 		2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresTableViewController.swift; sourceTree = "<group>"; };
 		2AE49FD42167814200F0B112 /* SubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTableViewController.swift; sourceTree = "<group>"; };
 		74C04964CC472C4CEA347066 /* Pods-signIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-signIn/Pods-signIn.release.xcconfig"; sourceTree = "<group>"; };
+		8D788E852179C8720039123E /* Admin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
+		8D788E872179C8860039123E /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		DD580000FAB232D7A3200984 /* Pods-signIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-signIn/Pods-signIn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,10 +106,13 @@
 		2A8F26FE215ACBF90068D3EE /* signIn */ = {
 			isa = PBXGroup;
 			children = (
+				8D788E852179C8720039123E /* Admin.storyboard */,
 				2A8F26FF215ACBF90068D3EE /* AppDelegate.swift */,
 				2A8F2701215ACBF90068D3EE /* ViewController.swift */,
 				2A8F2703215ACBF90068D3EE /* Main.storyboard */,
 				0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */,
+				0D571C522170B5E7004C99A3 /* SearchPlacesTableViewController.swift */,
+				8D788E872179C8860039123E /* CategoryViewController.swift */,
 				2AE49FD42167814200F0B112 /* SubTableViewController.swift */,
 				2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */,
 				2AE49FC7216421EE00F0B112 /* StoreViewController.swift */,
@@ -215,6 +222,7 @@
 				2AE49FC2216412A500F0B112 /* PostTableViewCell.xib in Resources */,
 				2A8F2712215ACD480068D3EE /* GoogleService-Info.plist in Resources */,
 				2A8F2707215ACBFA0068D3EE /* Assets.xcassets in Resources */,
+				8D788E862179C8720039123E /* Admin.storyboard in Resources */,
 				2A8F2705215ACBF90068D3EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +312,8 @@
 				2A8F2700215ACBF90068D3EE /* AppDelegate.swift in Sources */,
 				0DE32E282173AAF1003CCA03 /* SearchFuncTableViewController.swift in Sources */,
 				2AE49FC1216412A500F0B112 /* PostTableViewCell.swift in Sources */,
+				0D571C532170B5E7004C99A3 /* SearchPlacesTableViewController.swift in Sources */,
+				8D788E882179C8860039123E /* CategoryViewController.swift in Sources */,
 				2AE49FCB21642B6C00F0B112 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

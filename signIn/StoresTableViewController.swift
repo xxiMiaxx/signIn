@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class StoresTableViewController: UITableViewController {
 
@@ -24,9 +25,23 @@ class StoresTableViewController: UITableViewController {
    // @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
-       self.tableView.dataSource = self
+        self.tableView.dataSource = self
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
     }
     
+    ////////////////////////////// logout as user
+    @objc func logout(){
+        do {
+            try Auth.auth().signOut()
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController")
+            AppDelegate.shared.window?.rootViewController = vc
+            AppDelegate.shared.window?.makeKeyAndVisible()
+        }
+        catch {
+            Helper.alert(title: "Sign out", messagee: error.localizedDescription, okTitle: "ok", okHandler: nil)
+        }
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count
     }
