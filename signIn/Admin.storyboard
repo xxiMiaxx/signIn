@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SNr-Gw-468">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Category View Controller-->
+        <scene sceneID="A3g-ce-E97">
+            <objects>
+                <viewController storyboardIdentifier="CategoryViewController" id="oQf-O9-fLV" customClass="CategoryViewController" customModule="signIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i7m-mU-Qec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cX-FC-ZMH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RkQ-iu-knp">
+                                        <rect key="frame" x="0.0" y="128.5" width="375" height="474.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="riyadh_park" translatesAutoresizingMaskIntoConstraints="NO" id="q9w-5N-2QF" userLabel="riyadh_park">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="128.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="q9w-5N-2QF" secondAttribute="height" multiplier="1144:392" id="hWa-tV-Doz"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="q9w-5N-2QF" firstAttribute="top" secondItem="7cX-FC-ZMH" secondAttribute="top" id="AoY-dY-Dis"/>
+                                    <constraint firstAttribute="trailing" secondItem="RkQ-iu-knp" secondAttribute="trailing" id="HxH-gN-SV2"/>
+                                    <constraint firstItem="RkQ-iu-knp" firstAttribute="leading" secondItem="7cX-FC-ZMH" secondAttribute="leading" id="SiG-0x-wAD"/>
+                                    <constraint firstAttribute="trailing" secondItem="q9w-5N-2QF" secondAttribute="trailing" id="XxT-mF-liI"/>
+                                    <constraint firstItem="q9w-5N-2QF" firstAttribute="leading" secondItem="7cX-FC-ZMH" secondAttribute="leading" id="soi-3t-8ne"/>
+                                    <constraint firstItem="RkQ-iu-knp" firstAttribute="top" secondItem="q9w-5N-2QF" secondAttribute="bottom" id="w7K-GQ-KG8"/>
+                                    <constraint firstAttribute="bottom" secondItem="RkQ-iu-knp" secondAttribute="bottom" id="xfg-g7-sC7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7cX-FC-ZMH" firstAttribute="trailing" secondItem="jUt-HJ-fQ4" secondAttribute="trailing" id="bcA-qb-c3K"/>
+                            <constraint firstItem="7cX-FC-ZMH" firstAttribute="leading" secondItem="jUt-HJ-fQ4" secondAttribute="leading" id="hT6-sa-dTw"/>
+                            <constraint firstItem="7cX-FC-ZMH" firstAttribute="bottom" secondItem="jUt-HJ-fQ4" secondAttribute="bottom" id="uKM-YR-W0W"/>
+                            <constraint firstItem="7cX-FC-ZMH" firstAttribute="top" secondItem="jUt-HJ-fQ4" secondAttribute="top" id="veu-wc-6Rk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jUt-HJ-fQ4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yFb-BJ-lqI"/>
+                    <connections>
+                        <outlet property="tableView" destination="RkQ-iu-knp" id="XGJ-gM-LsA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7AT-So-ICH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871.20000000000005" y="1041.2293853073463"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hMq-45-0TO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SNr-Gw-468" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BW0-B8-lC2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oQf-O9-fLV" kind="relationship" relationship="rootViewController" id="Qbu-uV-bY9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9y-iM-keN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="1041.2293853073463"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="riyadh_park" width="572" height="196"/>
+    </resources>
+</document>
