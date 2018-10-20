@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gtN-QY-83T">
-                                <rect key="frame" x="0.0" y="174.5" width="375" height="318.5"/>
+                                <rect key="frame" x="0.0" y="144.5" width="375" height="378.5"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dU3-2f-lDd">
                                         <rect key="frame" x="129" y="0.0" width="117" height="29"/>
@@ -93,6 +93,13 @@
                                         <connections>
                                             <action selector="signInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6RS-ma-gF8"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2X-8K-bnC">
+                                        <rect key="frame" x="136" y="348.5" width="103" height="30"/>
+                                        <color key="backgroundColor" red="0.92512690352081217" green="0.047242311714387468" blue="0.056681745322408945" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="SignIn google+">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -375,10 +382,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-bookmark-page-24" width="18" height="18"/>
-        <image name="icons8-discount-24" width="18" height="18"/>
-        <image name="icons8-home-page-24" width="18" height="18"/>
-        <image name="icons8-schedule-24" width="18" height="18"/>
-        <image name="icons8-shop-department-24" width="18" height="18"/>
+        <image name="icons8-bookmark-page-24" width="24" height="24"/>
+        <image name="icons8-discount-24" width="24" height="24"/>
+        <image name="icons8-home-page-24" width="24" height="24"/>
+        <image name="icons8-schedule-24" width="24" height="24"/>
+        <image name="icons8-shop-department-24" width="24" height="24"/>
     </resources>
 </document>

@@ -111,7 +111,6 @@
 				2A8F2701215ACBF90068D3EE /* ViewController.swift */,
 				2A8F2703215ACBF90068D3EE /* Main.storyboard */,
 				0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */,
-				0D571C522170B5E7004C99A3 /* SearchPlacesTableViewController.swift */,
 				8D788E872179C8860039123E /* CategoryViewController.swift */,
 				2AE49FD42167814200F0B112 /* SubTableViewController.swift */,
 				2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */,
@@ -312,7 +311,6 @@
 				2A8F2700215ACBF90068D3EE /* AppDelegate.swift in Sources */,
 				0DE32E282173AAF1003CCA03 /* SearchFuncTableViewController.swift in Sources */,
 				2AE49FC1216412A500F0B112 /* PostTableViewCell.swift in Sources */,
-				0D571C532170B5E7004C99A3 /* SearchPlacesTableViewController.swift in Sources */,
 				8D788E882179C8860039123E /* CategoryViewController.swift in Sources */,
 				2AE49FCB21642B6C00F0B112 /* Post.swift in Sources */,
 			);

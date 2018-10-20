@@ -9,6 +9,8 @@
 import UIKit
 
 import Firebase
+import GoogleUtilities
+import GoogleSignIn
 
 
 struct AdminInfo {
@@ -16,20 +18,32 @@ struct AdminInfo {
 }
 
 @UIApplicationMain
-<<<<<<< HEAD
-class AppDelegate: UIResponder, UIApplicationDelegate  {
+//<<<<<<< HEAD
+//class AppDelegate: UIResponder, UIApplicationDelegate  {
 
-=======
-class AppDelegate: UIResponder, UIApplicationDelegate {
+//=======
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
->>>>>>> d31ff953c42ad85835b0d12222fa7fc96eae21a4
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {    
+    }
+    
+//>>>>>>> d31ff953c42ad85835b0d12222fa7fc96eae21a4
     var window: UIWindow?
     
     static let shared = UIApplication.shared.delegate as! AppDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+    
+        // Use Firebase library to configure APIs *GOOGLE*
         FirebaseApp.configure()
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        
         //check
         if let isLogin = Auth.auth().currentUser {
             if isLogin.email == AdminInfo.email {
@@ -72,6 +86,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+   
+  
+        
     
 }
 
+//}
