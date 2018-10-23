@@ -14,6 +14,8 @@
 		2A8F2707215ACBFA0068D3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F2706215ACBFA0068D3EE /* Assets.xcassets */; };
 		2A8F270A215ACBFA0068D3EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F2708215ACBFA0068D3EE /* LaunchScreen.storyboard */; };
 		2A8F2712215ACD480068D3EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F2711215ACD480068D3EE /* GoogleService-Info.plist */; };
+		2A99B4EE217E27BF00E32328 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A99B4ED217E27BF00E32328 /* AdSupport.framework */; };
+		2A99B4F0217E358B00E32328 /* ProtectedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99B4EF217E358B00E32328 /* ProtectedPageViewController.swift */; };
 		2AB1D825215FB78F00901D74 /* Pods_signIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9EAA3B662E31FA6FB9FBDD /* Pods_signIn.framework */; };
 		2AB1D826215FB78F00901D74 /* Pods_signIn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9EAA3B662E31FA6FB9FBDD /* Pods_signIn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AE49FAB2163BE3800F0B112 /* Pods_signIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE49FAA2163BE3800F0B112 /* Pods_signIn.framework */; };
@@ -56,6 +58,8 @@
 		2A8F2709215ACBFA0068D3EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A8F270B215ACBFA0068D3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A8F2711215ACD480068D3EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2A99B4ED217E27BF00E32328 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		2A99B4EF217E358B00E32328 /* ProtectedPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedPageViewController.swift; sourceTree = "<group>"; };
 		2AE49FAA2163BE3800F0B112 /* Pods_signIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_signIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE49FBF216412A500F0B112 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		2AE49FC0216412A500F0B112 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A99B4EE217E27BF00E32328 /* AdSupport.framework in Frameworks */,
 				2AB1D825215FB78F00901D74 /* Pods_signIn.framework in Frameworks */,
 				2AE49FAB2163BE3800F0B112 /* Pods_signIn.framework in Frameworks */,
 			);
@@ -110,6 +115,7 @@
 				2A8F26FF215ACBF90068D3EE /* AppDelegate.swift */,
 				2A8F2701215ACBF90068D3EE /* ViewController.swift */,
 				2A8F2703215ACBF90068D3EE /* Main.storyboard */,
+				2A99B4EF217E358B00E32328 /* ProtectedPageViewController.swift */,
 				0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */,
 				8D788E872179C8860039123E /* CategoryViewController.swift */,
 				2AE49FD42167814200F0B112 /* SubTableViewController.swift */,
@@ -148,6 +154,7 @@
 		8C2FB232BDC809365643EAF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A99B4ED217E27BF00E32328 /* AdSupport.framework */,
 				0F9EAA3B662E31FA6FB9FBDD /* Pods_signIn.framework */,
 			);
 			name = Frameworks;
@@ -312,6 +319,7 @@
 				0DE32E282173AAF1003CCA03 /* SearchFuncTableViewController.swift in Sources */,
 				2AE49FC1216412A500F0B112 /* PostTableViewCell.swift in Sources */,
 				8D788E882179C8860039123E /* CategoryViewController.swift in Sources */,
+				2A99B4F0217E358B00E32328 /* ProtectedPageViewController.swift in Sources */,
 				2AE49FCB21642B6C00F0B112 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

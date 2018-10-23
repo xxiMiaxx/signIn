@@ -9,8 +9,9 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import GoogleSignIn
 
-class StoresTableViewController: UITableViewController {
+class StoresTableViewController: UITableViewController , GIDSignInUIDelegate {
 
     
     
@@ -32,6 +33,7 @@ class StoresTableViewController: UITableViewController {
     ////////////////////////////// logout as user
     @objc func logout(){
         do {
+            GIDSignIn.sharedInstance().signOut()
             try Auth.auth().signOut()
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController")
             AppDelegate.shared.window?.rootViewController = vc
@@ -41,6 +43,8 @@ class StoresTableViewController: UITableViewController {
             Helper.alert(title: "Sign out", messagee: error.localizedDescription, okTitle: "ok", okHandler: nil)
         }
     }
+    //
+    //
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count

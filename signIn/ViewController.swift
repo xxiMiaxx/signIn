@@ -11,7 +11,7 @@ import FirebaseAuth
 import Firebase
 import GoogleSignIn
 
-class ViewController: UIViewController {
+class ViewController: UIViewController , GIDSignInUIDelegate   {
     
     @IBOutlet weak var signInSelector: UISegmentedControl!
     
@@ -28,12 +28,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view, typically from a nib.
-            // Do any additional setup after loading the view, typically from a nib.
-            // Do any additional setup after loading the view, typically from a nib.
+        
+        //google
+        
+       GIDSignIn.sharedInstance().uiDelegate = self
+      // GIDSignIn.sharedInstance().signIn()
+        
+        
+        //google
+        
         confirmPassTextField.isHidden=true
         confirmPassLable.isHidden=true
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,7 +76,7 @@ class ViewController: UIViewController {
                     if let firebaseError = error {
                         let s = firebaseError.localizedDescription
                         if  s == "There is no user record corresponding to this identifier. The user may have been deleted."{
-                            let alert = UIAlertController(title: "", message: " you are not registerd please sign up to start a greate journy ", preferredStyle: .alert)
+                            let alert = UIAlertController(title: "", message: " you are not registered please sign up to start a greate journey ", preferredStyle: .alert)
                             let action1 = UIAlertAction(title: "OK", style: .default, handler: { (action) in
                                 print("Action")
                                 

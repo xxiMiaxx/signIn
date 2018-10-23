@@ -111,6 +111,11 @@
                                     <constraint firstItem="dNq-vP-Na4" firstAttribute="leading" secondItem="gtN-QY-83T" secondAttribute="leading" id="sVp-dV-ITX"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEv-c2-jud" customClass="GIDSignInButton">
+                                <rect key="frame" x="105" y="584" width="164" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -134,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="-376"/>
+            <point key="canvasLocation" x="437.60000000000002" y="-376.46176911544228"/>
         </scene>
         <!--HOME-->
         <scene sceneID="X8J-ms-W9k">
@@ -210,9 +215,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="HNL-vo-eBp" kind="relationship" relationship="viewControllers" id="sDU-Nk-p7w"/>
-                        <segue destination="g7K-OX-R7d" kind="relationship" relationship="viewControllers" id="kl9-Jk-AtU"/>
                         <segue destination="r34-nR-0Wh" kind="relationship" relationship="viewControllers" id="qpL-oh-dKu"/>
+                        <segue destination="g7K-OX-R7d" kind="relationship" relationship="viewControllers" id="kl9-Jk-AtU"/>
+                        <segue destination="HNL-vo-eBp" kind="relationship" relationship="viewControllers" id="sDU-Nk-p7w"/>
                         <segue destination="JvQ-Wm-xPn" kind="relationship" relationship="viewControllers" id="Qtd-jl-SSS"/>
                         <segue destination="G3c-gq-JJm" kind="relationship" relationship="viewControllers" id="gem-4B-UdX"/>
                     </connections>
