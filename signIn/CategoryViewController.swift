@@ -62,6 +62,12 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         // logout
         switch category[indexPath.row] {
+            
+        case "Restaurant":
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "RestaurantListViewController")
+            self.navigationController?.pushViewController(vc!, animated: true)
+            break
+            
         case "Logout":
           
             do {

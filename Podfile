@@ -10,8 +10,9 @@ target 'signIn' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'GoogleSignIn'
-
-
+  pod 'SDWebImage', '~> 4.0'
+  pod 'NVActivityIndicatorView'
 
 end
