@@ -68,4 +68,10 @@ class StoresTableViewController: UITableViewController , GIDSignInUIDelegate {
         }
     }
 
+    
+    
+    
+    
 }
+
+

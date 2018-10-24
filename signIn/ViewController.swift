@@ -161,5 +161,13 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
+    
+    @IBAction func CallSecurity(_ sender: Any) {
+    
+        let url: NSURL = URL(string: "TEL://00966920009467")! as NSURL
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+    
+    }
+    
 }
 
