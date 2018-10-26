@@ -1,7 +1,5 @@
 //
 //  RestaurantListTableViewCell.swift
-//  CollectionRestaurant
-//
 
 
 import UIKit

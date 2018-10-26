@@ -1,6 +1,5 @@
 //
 //  AddRestaurantViewController.swift
-//  CollectionRestaurant
 
 
 import UIKit
@@ -89,7 +88,8 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
                     self.txtName.text = value["name"] as? String
                     self.txtPhoneNumber.text = value["phone"] as? String
                     let RestaurantURL: String = value["photoURL"] as? String ?? ""
-                    
+                
+                    self.title = value["name"] as? String
                     guard RestaurantURL.count != 0 else {
                         return
                     }
@@ -102,6 +102,7 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
                         SDWebImageManager.shared().loadImage(with: url, options: SDWebImageOptions.refreshCached, progress: nil, completed: { (image, _, error, _, _, _) in
                             
                             if let pic = image {
+                                self.imageSelected = pic
                                 self.resImageView.image = pic
                             }
                             else{
