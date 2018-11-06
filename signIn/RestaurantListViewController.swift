@@ -1,7 +1,6 @@
 //
 //  RestaurantListViewController.swift
-//  CollectionRestaurant
-//
+
 
 import UIKit
 import FirebaseDatabase

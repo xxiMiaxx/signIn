@@ -1,7 +1,5 @@
 //
 //  AddDataViewController.swift
-//  CollectionRestaurant
-//
 
 
 import UIKit
