@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D4AC1DF2191A1F000AE8E0F /* NotifcationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AC1DE2191A1F000AE8E0F /* NotifcationsViewController.swift */; };
 		0DE32E282173AAF1003CCA03 /* SearchFuncTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */; };
 		2A8F2700215ACBF90068D3EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F26FF215ACBF90068D3EE /* AppDelegate.swift */; };
 		2A8F2702215ACBF90068D3EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F2701215ACBF90068D3EE /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D4AC1DE2191A1F000AE8E0F /* NotifcationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifcationsViewController.swift; sourceTree = "<group>"; };
 		0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFuncTableViewController.swift; sourceTree = "<group>"; };
 		0F9EAA3B662E31FA6FB9FBDD /* Pods_signIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8F26FC215ACBF90068D3EE /* signIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = signIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				2A8F2701215ACBF90068D3EE /* ViewController.swift */,
 				8D761DEE21804509001D6DEA /* RestaurantListModel.swift */,
 				2A8F2703215ACBF90068D3EE /* Main.storyboard */,
+				0D4AC1DE2191A1F000AE8E0F /* NotifcationsViewController.swift */,
 				2A99B4EF217E358B00E32328 /* ProtectedPageViewController.swift */,
 				0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */,
 				8D788E872179C8860039123E /* CategoryViewController.swift */,
@@ -334,6 +337,7 @@
 				2AE49FCF2164AA0B00F0B112 /* storeProfile.swift in Sources */,
 				2AE49FD52167814200F0B112 /* SubTableViewController.swift in Sources */,
 				8D279A2D2180660900DB78EA /* RestaurantListTableViewCell.swift in Sources */,
+				0D4AC1DF2191A1F000AE8E0F /* NotifcationsViewController.swift in Sources */,
 				8D761DEB218044F3001D6DEA /* AddRestaurantViewController.swift in Sources */,
 				2AE49FC8216421EE00F0B112 /* StoreViewController.swift in Sources */,
 				8D761DED218044F9001D6DEA /* RestaurantListViewController.swift in Sources */,
