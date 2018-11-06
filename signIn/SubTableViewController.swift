@@ -10,6 +10,29 @@ import UIKit
 import FirebaseDatabase
 
 class SubTableViewController: UITableViewController {
+    
+    //Fav
+    
+    func someMethodIWantToCall(cell: UITableViewCell) {
+       // print("Inside of ViewController now...")
+        let indexPathTapped = tableView.indexPath(for: cell)
+        //print(indexPathTapped)
+        
+      // let name = twoDimensionalArray[indexPathTapped!.section].names[indexPathTapped!.row]
+        
+       
+       //print(name)
+       let name = posts[indexPathTapped!.row].name
+        print(name)
+        
+
+        
+        
+        
+        
+    }
+    
+    //Fav
 
     @IBOutlet weak var categoryName: UINavigationItem!
     var posts = [Post]()
@@ -80,7 +103,7 @@ class SubTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
-        
+        cell.link = self
         cell.set(post: self.posts[indexPath.row])
         return cell
         

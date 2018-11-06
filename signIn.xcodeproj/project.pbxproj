@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,7 @@
 		2AE49FD12164AB2A00F0B112 /* storeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD02164AB2A00F0B112 /* storeService.swift */; };
 		2AE49FD3216741D400F0B112 /* StoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */; };
 		2AE49FD52167814200F0B112 /* SubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD42167814200F0B112 /* SubTableViewController.swift */; };
+		2AF868192190B10700509E66 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AF868172190B10700509E66 /* Model.xcdatamodeld */; };
 		8D279A2D2180660900DB78EA /* RestaurantListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D279A2C2180660900DB78EA /* RestaurantListTableViewCell.swift */; };
 		8D761DE9218044E6001D6DEA /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D761DE8218044E6001D6DEA /* AddDataViewController.swift */; };
 		8D761DEB218044F3001D6DEA /* AddRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D761DEA218044F2001D6DEA /* AddRestaurantViewController.swift */; };
@@ -74,6 +75,7 @@
 		2AE49FD02164AB2A00F0B112 /* storeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeService.swift; sourceTree = "<group>"; };
 		2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresTableViewController.swift; sourceTree = "<group>"; };
 		2AE49FD42167814200F0B112 /* SubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTableViewController.swift; sourceTree = "<group>"; };
+		2AF868182190B10700509E66 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		74C04964CC472C4CEA347066 /* Pods-signIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-signIn/Pods-signIn.release.xcconfig"; sourceTree = "<group>"; };
 		8D279A2C2180660900DB78EA /* RestaurantListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantListTableViewCell.swift; sourceTree = "<group>"; };
 		8D761DE8218044E6001D6DEA /* AddDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDataViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		2A8F26F3215ACBF90068D3EE = {
 			isa = PBXGroup;
 			children = (
+				2AF868172190B10700509E66 /* Model.xcdatamodeld */,
 				2AE49FAA2163BE3800F0B112 /* Pods_signIn.framework */,
 				2A8F26FE215ACBF90068D3EE /* signIn */,
 				2A8F26FD215ACBF90068D3EE /* Products */,
@@ -217,7 +220,7 @@
 				};
 			};
 			buildConfigurationList = 2A8F26F7215ACBF90068D3EE /* Build configuration list for PBXProject "signIn" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -333,6 +336,7 @@
 				2A8F2702215ACBF90068D3EE /* ViewController.swift in Sources */,
 				2AE49FCF2164AA0B00F0B112 /* storeProfile.swift in Sources */,
 				2AE49FD52167814200F0B112 /* SubTableViewController.swift in Sources */,
+				2AF868192190B10700509E66 /* Model.xcdatamodeld in Sources */,
 				8D279A2D2180660900DB78EA /* RestaurantListTableViewCell.swift in Sources */,
 				8D761DEB218044F3001D6DEA /* AddRestaurantViewController.swift in Sources */,
 				2AE49FC8216421EE00F0B112 /* StoreViewController.swift in Sources */,
@@ -424,6 +428,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -477,6 +482,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -497,7 +503,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = signIn/Info.plist;
 				INSTALL_PATH = "@rpath";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_DYLIB_INSTALL_NAME = "@rpath/libofa.0.0.0.dylib";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@loader_path/Users/arwahamed/Desktop/signIn/Pods/FirebaseInstanceID/Frameworks",
@@ -508,7 +514,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv6 i386 x86_64 armv7 armv7s";
+				VALID_ARCHS = "armv6 i386 armv7 armv7s x86_64 16A366 arm64";
 			};
 			name = Debug;
 		};
@@ -525,7 +531,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = signIn/Info.plist;
 				INSTALL_PATH = "@rpath";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_DYLIB_INSTALL_NAME = "@rpath/libofa.0.0.0.dylib";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@loader_path/Users/arwahamed/Desktop/signIn/Pods/FirebaseInstanceID/Frameworks",
@@ -536,7 +542,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv6 i386 x86_64 armv7 armv7s";
+				VALID_ARCHS = "armv6 i386 armv7 armv7s x86_64 16A366 arm64";
 			};
 			name = Release;
 		};
@@ -562,6 +568,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2AF868172190B10700509E66 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2AF868182190B10700509E66 /* Model.xcdatamodel */,
+			);
+			currentVersion = 2AF868182190B10700509E66 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2A8F26F4215ACBF90068D3EE /* Project object */;
 }

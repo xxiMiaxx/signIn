@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -54,6 +55,21 @@
                                     <constraint firstAttribute="height" constant="25" id="yqO-jk-bKe"/>
                                 </constraints>
                             </imageView>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" semanticContentAttribute="playback" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ql4-OT-AWh">
+                                <rect key="frame" x="0.0" y="39" width="400" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                <items>
+                                    <barButtonItem style="plain" id="HkV-OI-KU2">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SHb-3g-SnW">
+                                            <rect key="frame" x="20" y="10" width="360" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="icons8-heart-outline-24"/>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.77270383880000004" green="0.088476244319999994" blue="0.1880760225" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -82,6 +98,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="fav" destination="SHb-3g-SnW" id="VI0-nT-FjC"/>
+                <outlet property="favBtn" destination="SHb-3g-SnW" id="6eA-O8-ctd"/>
                 <outlet property="postTextLable" destination="28J-cx-0Ea" id="XnL-K6-iJP"/>
                 <outlet property="profileImageView" destination="a6N-pL-o4j" id="2vn-Mw-YwH"/>
                 <outlet property="subtitleLable" destination="Imq-Pl-lAz" id="oNo-MI-22U"/>
@@ -91,6 +109,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="icons8-heart-outline-24" width="24" height="24"/>
         <image name="icons8-marker-filled-50" width="50" height="50"/>
     </resources>
 </document>

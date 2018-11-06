@@ -10,8 +10,18 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
     
+    //Fav
+    
+    var link: SubTableViewController?
+    
+    
+    //Fav
+    
+    @IBOutlet weak var fav: UIToolbar!
     @IBOutlet weak var profileImageView: UIImageView!
     
+    @IBOutlet weak var favBtn: UIButton!
+   // @IBOutlet weak var btnHeart: UIButton!
     @IBOutlet weak var Location: UILabel!
     @IBOutlet weak var userNameLable: UILabel!
     @IBOutlet weak var postTextLable: UILabel!
@@ -24,12 +34,26 @@ class PostTableViewCell: UITableViewCell {
        // profileImageView.clipsToBounds = true
         
     }
+    
+   
+    
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+     // btnHeart.tintColor = .red
+        favBtn.tintColor = .red
+     favBtn.addTarget(self, action: #selector(handleMarkAsFavorite), for: .touchUpInside)
+       //btnHeart = UIBarButtonItem(image: UIImage(named:"add"), style: .plain, target: self, action: #selector(handleMarkAsFavorite))
+       
+        
     }
+    
+ 
+    
+    
     
     func set(post:Post) {
         
@@ -53,5 +77,19 @@ class PostTableViewCell: UITableViewCell {
     
         
     }
+    
+   func viewDidLoad() {
+    
+       // fav.clipsToBounds = true
+    //btnHeart.tintColor = .red
+    }
+    
+    @objc private func handleMarkAsFavorite() {
+//print("Marking as favorite")
+         link?.someMethodIWantToCall(cell: self)
+        
+    }
+    
+    
     
 }

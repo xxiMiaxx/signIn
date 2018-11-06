@@ -13,7 +13,7 @@ import GoogleSignIn
 
 class StoresTableViewController: UITableViewController , GIDSignInUIDelegate {
 
-    
+ 
     
     //nwe
     

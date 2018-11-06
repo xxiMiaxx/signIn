@@ -11,7 +11,6 @@ import Foundation
 class Post {
     
     var name:String
-   // var location:String
     var loc: String
     var photoURL: URL
     var phone:String
@@ -19,10 +18,14 @@ class Post {
     
     init (name:String , photoURL: URL , phone:String , loc: String) {
         self.name = name
-        
         self.phone = phone
         self.photoURL = photoURL 
         self.loc = loc
+    }
+    
+    struct Store {
+        let name:String
+        var hasFavorited: Bool
     }
     
     
