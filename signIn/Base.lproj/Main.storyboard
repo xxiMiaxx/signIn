@@ -184,7 +184,7 @@
         <!--OFFERS-->
         <scene sceneID="pIt-GO-9ag">
             <objects>
-                <viewController id="G3c-gq-JJm" sceneMemberID="viewController">
+                <viewController id="G3c-gq-JJm" customClass="NotificationsViewController" customModule="signIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="daq-jb-eFW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +200,7 @@
         <!--EVENTS-->
         <scene sceneID="Pni-R8-PZN">
             <objects>
-                <viewController id="g7K-OX-R7d" sceneMemberID="viewController">
+                <viewController id="g7K-OX-R7d" customClass="NotificationsViewController" customModule="signIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dSU-Fb-Nka">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -395,10 +395,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-bookmark-page-24" width="18" height="18"/>
-        <image name="icons8-discount-24" width="18" height="18"/>
-        <image name="icons8-home-page-24" width="18" height="18"/>
-        <image name="icons8-schedule-24" width="18" height="18"/>
-        <image name="icons8-shop-department-24" width="18" height="18"/>
+        <image name="icons8-bookmark-page-24" width="24" height="24"/>
+        <image name="icons8-discount-24" width="24" height="24"/>
+        <image name="icons8-home-page-24" width="24" height="24"/>
+        <image name="icons8-schedule-24" width="24" height="24"/>
+        <image name="icons8-shop-department-24" width="24" height="24"/>
     </resources>
 </document>
