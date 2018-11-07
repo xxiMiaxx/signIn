@@ -66,6 +66,18 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         case "Restaurant":
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "RestaurantListViewController")
             self.navigationController?.pushViewController(vc!, animated: true)
+            
+        case "Stores":
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "StoresListViewController")
+            self.navigationController?.pushViewController(vc!, animated: true)
+            
+        case "Offers":
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "OfferListViewController")
+            self.navigationController?.pushViewController(vc!, animated: true)
+            
+        case "Events":
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "EventListViewController")
+            self.navigationController?.pushViewController(vc!, animated: true)
             break
             
         case "Logout":

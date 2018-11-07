@@ -8,59 +8,42 @@ import MobileCoreServices
 import SDWebImage
 import NVActivityIndicatorView
 
-enum ActionMethodMode {
-    case add
-    case edit(String)
-}
-
-class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable {
+class AddOfferViewController: UIViewController, NVActivityIndicatorViewable {
     
     private var pickerController = UIImagePickerController()
     
-    @IBOutlet weak var resImageView: UIImageView!
-    @IBOutlet weak var btnGateNumber: DropDownMenu!
-    @IBOutlet weak var btnLocation: DropDownMenu!
-    @IBOutlet weak var txtName: UITextField!
-    @IBOutlet weak var txtPhoneNumber: UITextField!
+    @IBOutlet weak var dateView: UIView!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    var iss:Bool = true
+    var dateformatter = DateFormatter()
     
+    @IBOutlet weak var offerImageView: UIImageView!
+    @IBOutlet weak var txtSdate: UITextField!
+    @IBOutlet weak var txtEdate: UITextField!
+    @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var btnAddOrEdit: UIButton!
     
     var imageSelected: UIImage? = nil
     
-    var RestaurantRef = Database.database().reference().child("Restaurants")
+    var OfferRef = Database.database().reference().child("Offers")
     
     var mode:ActionMethodMode = ActionMethodMode.add
     
-    var locationPickerData = [String]()
-    var gatePickerData = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Add Restaurant"
+        self.title = "Add Offer"
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapHandler(_:)))
-        
-        resImageView.addGestureRecognizer(tapGesture)
+        offerImageView.addGestureRecognizer(tapGesture)
         
         isEditAction()
         
-        locationPickerData = ["Ground floor", "First floor"]
-        gatePickerData = ["Gate 1", "Gate 2", "Gate 3", "Gate 4"]
+        self.dateView.isHidden = true
         
-        btnGateNumber.setTitle("Select Gate Number", for: .normal)
-        btnGateNumber.superSuperView = self.view
-        btnGateNumber.items = gatePickerData
-        btnGateNumber.didSelectedItemIndex = { index in
-            self.btnGateNumber.setTitle(self.gatePickerData[index], for: .normal)
-        }
-        
-        btnLocation.setTitle("Select Location", for: .normal)
-        btnLocation.superSuperView = self.view
-        btnLocation.items = locationPickerData
-        btnLocation.didSelectedItemIndex = { index in
-            self.btnLocation.setTitle(self.locationPickerData[index], for: .normal)
-        }
+        dateformatter.dateFormat = "dd/MM/YYYY"
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,18 +55,44 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
         self.openImagePicker()
     }
     
-
-    @objc func deleteRestaurant() {
+    @objc func deleteOffer() {
         
         switch mode {
             case .add: break
-       
             case .edit(let id):
-                RestaurantRef.child(id).removeValue { (error, refrece) in
+                OfferRef.child(id).removeValue { (error, refrece) in
                     self.navigationController?.popViewController(animated: true)
                 }
             break
         }
+    }
+    
+    @IBAction func btnDoneAction(_ sender: UIButton) {
+        self.dateView.isHidden = true
+        if iss{
+            txtSdate.text = dateformatter.string(from: datePicker.date)
+        }else{
+            txtEdate.text = dateformatter.string(from: datePicker.date)
+        }
+    }
+    @IBAction func btnCancelAction(_ sender: UIButton) {
+
+        self.dateView.isHidden = true
+    }
+    
+    @IBAction func btnStartDate(_ sender:UIButton){
+        if(txtSdate.text != ""){
+            datePicker.date = dateformatter.date(from: txtSdate.text!) ?? Date()
+        }
+        self.dateView.isHidden = false
+        iss = true
+    }
+    @IBAction func btnEndDate(_ sender:UIButton){
+        if(txtEdate.text != ""){
+            datePicker.date = dateformatter.date(from: txtEdate.text!) ?? Date()
+        }
+        self.dateView.isHidden = false
+        iss = false
     }
     
     func isEditAction() {
@@ -91,63 +100,41 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
         case .add: break
             
         case .edit(let id):
-            self.title = "Edit Restaurant"
+            self.title = "Edit Offer"
             btnAddOrEdit.setTitle("Edit", for: .normal)
             
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteRestaurant))
-            let RestaurantRef = Database.database().reference().child("Restaurants")
-            RestaurantRef.child(id).observeSingleEvent(of: .value) { (snapshot) in
+            print("ss"+id)
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteOffer))
+            let OfferRef = Database.database().reference().child("Offers")
+            OfferRef.child(id).observeSingleEvent(of: .value) { (snapshot) in
                 if let value = snapshot.value as? [String: AnyObject] {
-                    if let Gate = value["Gate"] as? String {
-                        self.btnGateNumber.text = Gate
-                       // self.btnGateNumber.selectedIndex = 0
-                    }
-                    if let loc = value["loc"] as? String {
-                        self.btnLocation.text = loc
-                     //   self.btnLocation.selectedIndex = 0
-                    }
+                    self.title = value["name"] as? String
                     self.txtName.text = value["name"] as? String
-                    self.title = value["name"] as? String
-                    self.txtPhoneNumber.text = value["phone"] as? String
-                    let RestaurantURL: String = value["photoURL"] as? String ?? ""
-<<<<<<< HEAD
-//<<<<<<< HEAD
-//=======
-                
-//>>>>>>> 3957a63e187d404b0d0b2e5c70a1fb1822b52cc5
-=======
->>>>>>> ca2c8fd0a6cc6f97181a3cc07e8513321ecbfc3e
-                    self.title = value["name"] as? String
-                    guard RestaurantURL.count != 0 else {
+                    self.txtSdate.text = value["Sdate"] as? String
+                    self.txtEdate.text = value["Edate"] as? String
+                    let OfferURL: String = value["photoURL"] as? String ?? ""
+                    
+                    guard OfferURL.count != 0 else {
                         return
                     }
                     
-                    if let url = URL(string: RestaurantURL){
+                    if let url = URL(string: OfferURL){
                         SDWebImageManager.shared().loadImage(with: url, options: SDWebImageOptions.refreshCached, progress: nil, completed: { (image, _, error, _, _, _) in
                             
                             if let pic = image {
-<<<<<<< HEAD
-//<<<<<<< HEAD
-                               // self.imageSelected = pic
-//=======
                                 self.imageSelected = pic
-//>>>>>>> 3957a63e187d404b0d0b2e5c70a1fb1822b52cc5
-=======
-                                self.imageSelected = pic
->>>>>>> ca2c8fd0a6cc6f97181a3cc07e8513321ecbfc3e
-                                self.resImageView.image = pic
+                                self.offerImageView.image = pic
                             }
                             else{
-                                self.resImageView.image = #imageLiteral(resourceName: "default_rest_img")
+                                self.offerImageView.image = #imageLiteral(resourceName: "default_rest_img")
                                 debugPrint(error ?? "Error On Downloading image")
                             }
                         })
                     }
                     else{
-                        self.resImageView.image = #imageLiteral(resourceName: "default_rest_img")
+                        self.offerImageView.image = #imageLiteral(resourceName: "default_rest_img")
                         debugPrint("Error On Downloading image")
                     }
-                    
                 }
             }
         }
@@ -239,7 +226,7 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
     }
     
     
-    @IBAction func addRestaurant(_ sendre: UIButton) {
+    @IBAction func addOffer(_ sendre: UIButton) {
         
         if checkTextField() == false{ return}
         
@@ -255,7 +242,9 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
                     if let data = metaData {
                         if let _ = data.name{
                             storageRef.downloadURL { (url, error) in
-                               self.uploadDataOnFirebase(with: url?.description ?? "")
+                                print("ss")
+                                debugPrint(url)
+                                self.uploadDataOnFirebase(with: url?.description ?? "")
                             }
                         }
                         else{
@@ -288,14 +277,12 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
         }else if(txtName.text == ""){
             self.alert(title: txtName.placeholder, messagee: nil, okTitle: "Ok")
             
-        }else if(txtPhoneNumber.text == ""){
-            self.alert(title: txtPhoneNumber.placeholder, messagee: nil, okTitle: "Ok")
+        }else if(txtSdate.text == ""){
+            self.alert(title: txtSdate.placeholder, messagee: nil, okTitle: "Ok")
             
-        }else if(btnLocation.selectedIndex == -1){
-            self.alert(title: "Select Location", messagee: nil, okTitle: "Ok")
-            
-        }else if(btnGateNumber.selectedIndex == -1){
-            self.alert(title: "Select Gate Number", messagee: nil, okTitle: "Ok")
+        }else if(txtEdate.text == ""){
+            self.alert(title: txtEdate.placeholder, messagee: nil, okTitle: "Ok")
+        
         }
         else{
             return true
@@ -305,30 +292,29 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
     
     func uploadDataOnFirebase(with url: String) {
         let parameters: [AnyHashable : Any] = [
-            "Gate": btnGateNumber.text,
-            "loc": btnLocation.text,
+            "Sdate": txtSdate.text ?? "",
+            "Edate": txtEdate.text ?? "",
             "name": txtName.text ?? "",
-            "phone": txtPhoneNumber.text ?? "",
             "photoURL": url
         ]
-        debugPrint(parameters)
         
+        debugPrint(parameters)
         switch mode {
         case .add:
             
-            RestaurantRef.queryOrdered(byChild: "name").queryEqual(toValue : txtName.text!).observeSingleEvent(of: .value) { (snapshot) in
+            OfferRef.queryOrdered(byChild: "name").queryEqual(toValue : txtName.text!).observeSingleEvent(of: .value) { (snapshot) in
                 
                 for child in (snapshot.children.allObjects as? [DataSnapshot]) ?? [] {
                     
                     print(child.key)
                     self.stopAnimating()
-                    self.alert(title: "Restaurant already exists. Please try another Restaurant", messagee: nil, okTitle: "Ok")
+                    self.alert(title: "Offer already exists.", messagee: nil, okTitle: "Ok")
                     return
                 }
-                self.RestaurantRef.childByAutoId().setValue(parameters, withCompletionBlock:  { (error, dataRef) in
+                self.OfferRef.childByAutoId().setValue(parameters, withCompletionBlock:  { (error, dataRef) in
                     if error == nil {
                         debugPrint(dataRef.key as Any)
-                       // self.clearValue()
+                        self.clearValue()
                         self.navigationController?.popViewController(animated: true)
                     }
                     else{
@@ -341,13 +327,14 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
                     self.stopAnimating()
                 })
             }
+            
             break
             
         case .edit(let id):
-            RestaurantRef.child(id).updateChildValues(parameters) { (error, dataRef) in
+            OfferRef.child(id).updateChildValues(parameters) { (error, dataRef) in
                 if error == nil {
                     debugPrint(dataRef.key as Any)
-                  //  self.clearValue()
+                    self.clearValue()
                     self.navigationController?.popViewController(animated: true)
                 }
                 else{
@@ -371,16 +358,16 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
     }
     
     func clearValue() {
-        self.btnGateNumber.text = "Select Gate Number"
-        self.btnLocation.text = "Select Location"
-        self.txtPhoneNumber.text = ""
+        self.txtSdate.text = ""
+        self.txtEdate.text = ""
         self.txtName.text = ""
-        self.resImageView.image = #imageLiteral(resourceName: "default_rest_img")
+        self.offerImageView.image = #imageLiteral(resourceName: "default_rest_img")
         self.imageSelected = nil
     }
 }
 
-extension AddRestaurantViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+extension AddOfferViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         picker.dismiss(animated: true) {
@@ -391,7 +378,7 @@ extension AddRestaurantViewController: UIImagePickerControllerDelegate, UINaviga
                 newImage = possibleImage
             }
             self.imageSelected = newImage
-            self.resImageView.image = newImage
+            self.offerImageView.image = newImage
         }
     }
     

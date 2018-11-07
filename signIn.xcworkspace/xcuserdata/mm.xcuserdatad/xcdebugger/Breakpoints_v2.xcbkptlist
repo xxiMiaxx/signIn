@@ -28,12 +28,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "signIn/AddRestaurantViewController.swift"
-            timestampString = "562158542.963465"
+            timestampString = "563276479.071269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "addRestaurant(_:)"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "setupAlertController()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -44,12 +44,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "signIn/AddRestaurantViewController.swift"
-            timestampString = "562158542.96426"
+            timestampString = "563276479.071354"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
-            landmarkName = "checkTextField()"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "addRestaurant(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

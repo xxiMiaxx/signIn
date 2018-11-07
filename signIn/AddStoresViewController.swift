@@ -1,4 +1,5 @@
 
+
 import UIKit
 import Photos
 import PhotosUI
@@ -8,16 +9,41 @@ import MobileCoreServices
 import SDWebImage
 import NVActivityIndicatorView
 
-enum ActionMethodMode {
+enum StoreMethodMode {
     case add
-    case edit(String)
+    case edit(String, String)
 }
 
-class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable {
+enum StoreTabes: String {
+    case AccessoriesJewelry = "Accessories & Jewelry"
+    case BagsShoes = "Bags & Shoes"
+    case ChildrenShops = "Children Shops"
+    case Clothes = "Clothes"
+    case CoffeShopsBakeries = "Coffee Shops & Bakeries"
+    case Home
+    case PerfumesAndBeauty = "Perfumes and Beauty"
+    case PharmacyOptics = "Pharmacy & Optics"
+    case Sport
+    
+    static var all: [StoreTabes] = [
+        StoreTabes.AccessoriesJewelry,
+        .BagsShoes,
+        .ChildrenShops,
+        .Clothes,
+        .CoffeShopsBakeries,
+        .Home,
+        .PerfumesAndBeauty,
+        .PharmacyOptics,
+        .Sport
+    ]
+}
+
+class AddStoresViewController: UIViewController, NVActivityIndicatorViewable {
     
     private var pickerController = UIImagePickerController()
     
     @IBOutlet weak var resImageView: UIImageView!
+    @IBOutlet weak var btnStore: DropDownMenu!
     @IBOutlet weak var btnGateNumber: DropDownMenu!
     @IBOutlet weak var btnLocation: DropDownMenu!
     @IBOutlet weak var txtName: UITextField!
@@ -27,23 +53,21 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
     
     var imageSelected: UIImage? = nil
     
-    var RestaurantRef = Database.database().reference().child("Restaurants")
+    var StoresRef = Database.database().reference()
     
-    var mode:ActionMethodMode = ActionMethodMode.add
-    
+    var mode: StoreMethodMode = StoreMethodMode.add
+
     var locationPickerData = [String]()
     var gatePickerData = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Add Restaurant"
+        self.title = "Add Stores"
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapHandler(_:)))
         
         resImageView.addGestureRecognizer(tapGesture)
-        
-        isEditAction()
         
         locationPickerData = ["Ground floor", "First floor"]
         gatePickerData = ["Gate 1", "Gate 2", "Gate 3", "Gate 4"]
@@ -51,6 +75,7 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
         btnGateNumber.setTitle("Select Gate Number", for: .normal)
         btnGateNumber.superSuperView = self.view
         btnGateNumber.items = gatePickerData
+        btnGateNumber.direction = .top
         btnGateNumber.didSelectedItemIndex = { index in
             self.btnGateNumber.setTitle(self.gatePickerData[index], for: .normal)
         }
@@ -61,6 +86,15 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
         btnLocation.didSelectedItemIndex = { index in
             self.btnLocation.setTitle(self.locationPickerData[index], for: .normal)
         }
+        
+        btnStore.setTitle("Select Store", for: .normal)
+        btnStore.superSuperView = self.view
+        btnStore.items = StoreTabes.all.map { $0.rawValue }
+        btnStore.didSelectedItemIndex = { index in
+            self.btnStore.setTitle(StoreTabes.all[index].rawValue, for: .normal)
+        }
+        
+        isEditAction()
     }
     
     override func didReceiveMemoryWarning() {
@@ -68,18 +102,22 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        btnStore.reloadInputViews()
+    }
+    
     @objc func imageTapHandler(_ sender: UITapGestureRecognizer) {
         self.openImagePicker()
     }
     
-
-    @objc func deleteRestaurant() {
+    @objc func deleteStores() {
         
         switch mode {
             case .add: break
-       
-            case .edit(let id):
-                RestaurantRef.child(id).removeValue { (error, refrece) in
+            case .edit(let id, let store):
+                StoresRef.child(store).child(id).removeValue { (error, refrece) in
                     self.navigationController?.popViewController(animated: true)
                 }
             break
@@ -88,15 +126,18 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
     
     func isEditAction() {
         switch mode {
-        case .add: break
+        case .add:
+            btnStore.isEnabled = true
+            break
             
-        case .edit(let id):
-            self.title = "Edit Restaurant"
+        case .edit(let id, let store):
+            self.title = "Edit Stores"
             btnAddOrEdit.setTitle("Edit", for: .normal)
-            
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteRestaurant))
-            let RestaurantRef = Database.database().reference().child("Restaurants")
-            RestaurantRef.child(id).observeSingleEvent(of: .value) { (snapshot) in
+            btnStore.isEnabled = false
+            btnStore.text = store
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteStores))
+            let StoresRef = Database.database().reference().child(store)
+            StoresRef.child(id).observeSingleEvent(of: .value) { (snapshot) in
                 if let value = snapshot.value as? [String: AnyObject] {
                     if let Gate = value["Gate"] as? String {
                         self.btnGateNumber.text = Gate
@@ -106,35 +147,22 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
                         self.btnLocation.text = loc
                      //   self.btnLocation.selectedIndex = 0
                     }
+                    self.btnStore.selectedIndex = 0
+                    self.btnStore.text = store
+                    self.title = value["name"] as? String
                     self.txtName.text = value["name"] as? String
-                    self.title = value["name"] as? String
                     self.txtPhoneNumber.text = value["phone"] as? String
-                    let RestaurantURL: String = value["photoURL"] as? String ?? ""
-<<<<<<< HEAD
-//<<<<<<< HEAD
-//=======
-                
-//>>>>>>> 3957a63e187d404b0d0b2e5c70a1fb1822b52cc5
-=======
->>>>>>> ca2c8fd0a6cc6f97181a3cc07e8513321ecbfc3e
+                    let StoresURL: String = value["photoURL"] as? String ?? ""
                     self.title = value["name"] as? String
-                    guard RestaurantURL.count != 0 else {
+                    guard StoresURL.count != 0 else {
                         return
                     }
                     
-                    if let url = URL(string: RestaurantURL){
+                    if let url = URL(string: StoresURL){
                         SDWebImageManager.shared().loadImage(with: url, options: SDWebImageOptions.refreshCached, progress: nil, completed: { (image, _, error, _, _, _) in
                             
                             if let pic = image {
-<<<<<<< HEAD
-//<<<<<<< HEAD
-                               // self.imageSelected = pic
-//=======
                                 self.imageSelected = pic
-//>>>>>>> 3957a63e187d404b0d0b2e5c70a1fb1822b52cc5
-=======
-                                self.imageSelected = pic
->>>>>>> ca2c8fd0a6cc6f97181a3cc07e8513321ecbfc3e
                                 self.resImageView.image = pic
                             }
                             else{
@@ -239,7 +267,7 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
     }
     
     
-    @IBAction func addRestaurant(_ sendre: UIButton) {
+    @IBAction func addStores(_ sendre: UIButton) {
         
         if checkTextField() == false{ return}
         
@@ -285,6 +313,9 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
         if imageSelected == nil{
             self.alert(title: "Please select an image", messagee: nil, okTitle: "Ok")
             
+        }else if(btnStore.selectedIndex == -1){
+            self.alert(title: "Select Store Name", messagee: nil, okTitle: "Ok")
+            
         }else if(txtName.text == ""){
             self.alert(title: txtName.placeholder, messagee: nil, okTitle: "Ok")
             
@@ -316,19 +347,20 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
         switch mode {
         case .add:
             
-            RestaurantRef.queryOrdered(byChild: "name").queryEqual(toValue : txtName.text!).observeSingleEvent(of: .value) { (snapshot) in
+            StoresRef.child(btnStore.text).queryOrdered(byChild: "name").queryEqual(toValue : txtName.text!).observeSingleEvent(of: .value) { (snapshot) in
                 
                 for child in (snapshot.children.allObjects as? [DataSnapshot]) ?? [] {
                     
                     print(child.key)
                     self.stopAnimating()
-                    self.alert(title: "Restaurant already exists. Please try another Restaurant", messagee: nil, okTitle: "Ok")
+                    self.alert(title: "Stores already exists.", messagee: nil, okTitle: "Ok")
                     return
                 }
-                self.RestaurantRef.childByAutoId().setValue(parameters, withCompletionBlock:  { (error, dataRef) in
+                
+                self.StoresRef.child(self.btnStore.text).childByAutoId().setValue(parameters, withCompletionBlock:  { (error, dataRef) in
                     if error == nil {
                         debugPrint(dataRef.key as Any)
-                       // self.clearValue()
+                     //   self.clearValue()
                         self.navigationController?.popViewController(animated: true)
                     }
                     else{
@@ -343,11 +375,11 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
             }
             break
             
-        case .edit(let id):
-            RestaurantRef.child(id).updateChildValues(parameters) { (error, dataRef) in
+        case .edit(let id, let store):
+            StoresRef.child(store).child(id).updateChildValues(parameters) { (error, dataRef) in
                 if error == nil {
                     debugPrint(dataRef.key as Any)
-                  //  self.clearValue()
+                 //   self.clearValue()
                     self.navigationController?.popViewController(animated: true)
                 }
                 else{
@@ -371,8 +403,8 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
     }
     
     func clearValue() {
-        self.btnGateNumber.text = "Select Gate Number"
-        self.btnLocation.text = "Select Location"
+        self.btnGateNumber.text = ""
+        self.btnLocation.text = ""
         self.txtPhoneNumber.text = ""
         self.txtName.text = ""
         self.resImageView.image = #imageLiteral(resourceName: "default_rest_img")
@@ -380,7 +412,7 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
     }
 }
 
-extension AddRestaurantViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension AddStoresViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         picker.dismiss(animated: true) {
@@ -399,3 +431,4 @@ extension AddRestaurantViewController: UIImagePickerControllerDelegate, UINaviga
         picker.dismiss(animated: true) { }
     }
 }
+

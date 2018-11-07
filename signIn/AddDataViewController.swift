@@ -1,6 +1,3 @@
-//
-//  AddDataViewController.swift
-
 
 import UIKit
 import FirebaseAuth

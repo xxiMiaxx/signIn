@@ -2,13 +2,13 @@
 
 import UIKit
 
-class RestaurantListModel: NSObject {
+class StoresListModel: NSObject {
     var Id: String = ""
     var GateNumber: String = ""
     var Location: String = ""
     var Name: String = ""
     var PhoneNumber: String = ""
-    var RestaurantURL: String = ""
+    var StoresURL: String = ""
     
     init(id: String, value: AnyObject) {
         super.init()
@@ -19,7 +19,7 @@ class RestaurantListModel: NSObject {
             Location = dict["loc"] ?? ""
             Name = dict["name"] ?? ""
             PhoneNumber = dict["phone"] ?? ""
-            RestaurantURL = dict["photoURL"] ?? ""
+            StoresURL = dict["photoURL"] ?? ""
         }
     }
 }
