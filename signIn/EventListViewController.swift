@@ -1,21 +1,20 @@
 
-
 import UIKit
 import FirebaseDatabase
 import FirebaseStorage
 
 
-class RestaurantListViewController: UIViewController {
+class EventListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let RestaurantRef = Database.database().reference().child("Restaurants")
-    var restaurantList: [RestaurantListModel] = []
+    let EventRef = Database.database().reference().child("Events")
+    var EventList: [EventListModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Restaurants"
+        self.title = "Events"
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -24,56 +23,49 @@ class RestaurantListViewController: UIViewController {
         tableView.estimatedRowHeight = 120
         tableView.tableFooterView = UIView()
         
-        
-      
-       
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewRestaurant(_:)))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewEvent(_:)))
     }
 
     override func viewWillAppear(_ animated: Bool) {
-         self.fetchAllRestaurant()
+         self.fetchAllEvent()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-  
-    @objc func addNewRestaurant(_ sender: UIBarButtonItem) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddRestaurantViewController")
+    @objc func addNewEvent(_ sender: UIBarButtonItem) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddEventViewController")
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
-
-    func fetchAllRestaurant() {
+    func fetchAllEvent() {
         
-        RestaurantRef.observe(DataEventType.value) { (snapShot) in
-            self.restaurantList.removeAll()
+        EventRef.observe(DataEventType.value) { (snapShot) in
+            self.EventList.removeAll()
             
             if let value = snapShot.value as? [String: AnyObject] {
                 for key in value.keys {
     
-                    let model = RestaurantListModel(id: key, value: value[key]!)
-                    self.restaurantList.append(model)
+                    let model = EventListModel(id: key, value: value[key]!)
+                    self.EventList.append(model)
                 }
             }
             
             self.tableView.reloadData()
         }
     }
-
 }
 
-extension RestaurantListViewController: UITableViewDelegate, UITableViewDataSource {
+extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantList.count
+        return EventList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantListTableViewCell") as! RestaurantListTableViewCell
-        cell.setUpData(model: restaurantList[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventListTableViewCell") as! EventListTableViewCell
+        cell.setUpData(model: EventList[indexPath.row])
         cell.layoutIfNeeded()
         cell.layoutSubviews()
         cell.selectionStyle = .none
@@ -81,10 +73,9 @@ extension RestaurantListViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddRestaurantViewController") as! AddRestaurantViewController
-        vc.mode = .edit(restaurantList[indexPath.row].Id)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddEventViewController") as! AddEventViewController
+        vc.mode = .edit(EventList[indexPath.row].Id)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -2,24 +2,26 @@
 
 import UIKit
 
-class RestaurantListModel: NSObject {
+class EventListModel: NSObject {
     var Id: String = ""
-    var GateNumber: String = ""
     var Location: String = ""
+    var Desc: String = ""
     var Name: String = ""
-    var PhoneNumber: String = ""
-    var RestaurantURL: String = ""
+    var Sdate: String = ""
+    var Edate: String = ""
+    var EventURL: String = ""
     
     init(id: String, value: AnyObject) {
         super.init()
         
         self.Id = id
         if let dict = value as? [String: String] {
-            GateNumber = dict["Gate"] ?? ""
             Location = dict["loc"] ?? ""
+            Desc = dict["desc"] ?? ""
             Name = dict["name"] ?? ""
-            PhoneNumber = dict["phone"] ?? ""
-            RestaurantURL = dict["photoURL"] ?? ""
+            EventURL = dict["photoURL"] ?? ""
+            Sdate = dict["Sdate"] ?? ""
+            Edate = dict["Edate"] ?? ""
         }
     }
 }

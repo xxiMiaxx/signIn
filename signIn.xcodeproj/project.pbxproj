@@ -31,8 +31,21 @@
 		2AE49FD52167814200F0B112 /* SubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD42167814200F0B112 /* SubTableViewController.swift */; };
 		2AF868192190B10700509E66 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AF868172190B10700509E66 /* Model.xcdatamodeld */; };
 		8D279A2D2180660900DB78EA /* RestaurantListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D279A2C2180660900DB78EA /* RestaurantListTableViewCell.swift */; };
+		8D62BFB22192C84B004A88DA /* DropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFB12192C84B004A88DA /* DropDownMenu.swift */; };
+		8D62BFB42192C892004A88DA /* AddOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFB32192C892004A88DA /* AddOfferViewController.swift */; };
+		8D62BFB62192C89C004A88DA /* OfferListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFB52192C89B004A88DA /* OfferListModel.swift */; };
+		8D62BFB82192C8A7004A88DA /* OfferListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFB72192C8A7004A88DA /* OfferListViewController.swift */; };
+		8D62BFBA2192C8AE004A88DA /* OfferListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFB92192C8AE004A88DA /* OfferListTableViewCell.swift */; };
+		8D62BFBC2192CA5E004A88DA /* EventListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFBB2192CA5E004A88DA /* EventListModel.swift */; };
+		8D62BFBE2192CA68004A88DA /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFBD2192CA67004A88DA /* AddEventViewController.swift */; };
+		8D62BFC02192CA6D004A88DA /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFBF2192CA6D004A88DA /* EventListViewController.swift */; };
+		8D62BFC22192CA8C004A88DA /* EventListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFC12192CA8C004A88DA /* EventListTableViewCell.swift */; };
+		8D62BFC42192CAF5004A88DA /* StoresListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFC32192CAF5004A88DA /* StoresListModel.swift */; };
+		8D62BFC62192CAFD004A88DA /* AddStoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFC52192CAFC004A88DA /* AddStoresViewController.swift */; };
+		8D62BFC82192CB04004A88DA /* StoresListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFC72192CB04004A88DA /* StoresListTableViewCell.swift */; };
+		8D62BFCA2192CB0B004A88DA /* StoresListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFC92192CB0B004A88DA /* StoresListViewController.swift */; };
+		8D62BFCC2192D537004A88DA /* AddRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFCB2192D537004A88DA /* AddRestaurantViewController.swift */; };
 		8D761DE9218044E6001D6DEA /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D761DE8218044E6001D6DEA /* AddDataViewController.swift */; };
-		8D761DEB218044F3001D6DEA /* AddRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D761DEA218044F2001D6DEA /* AddRestaurantViewController.swift */; };
 		8D761DED218044F9001D6DEA /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D761DEC218044F9001D6DEA /* RestaurantListViewController.swift */; };
 		8D761DEF21804509001D6DEA /* RestaurantListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D761DEE21804509001D6DEA /* RestaurantListModel.swift */; };
 		8D788E862179C8720039123E /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D788E852179C8720039123E /* Admin.storyboard */; };
@@ -80,8 +93,21 @@
 		2AF868182190B10700509E66 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		74C04964CC472C4CEA347066 /* Pods-signIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-signIn/Pods-signIn.release.xcconfig"; sourceTree = "<group>"; };
 		8D279A2C2180660900DB78EA /* RestaurantListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantListTableViewCell.swift; sourceTree = "<group>"; };
+		8D62BFB12192C84B004A88DA /* DropDownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownMenu.swift; sourceTree = "<group>"; };
+		8D62BFB32192C892004A88DA /* AddOfferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOfferViewController.swift; sourceTree = "<group>"; };
+		8D62BFB52192C89B004A88DA /* OfferListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferListModel.swift; sourceTree = "<group>"; };
+		8D62BFB72192C8A7004A88DA /* OfferListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferListViewController.swift; sourceTree = "<group>"; };
+		8D62BFB92192C8AE004A88DA /* OfferListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferListTableViewCell.swift; sourceTree = "<group>"; };
+		8D62BFBB2192CA5E004A88DA /* EventListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListModel.swift; sourceTree = "<group>"; };
+		8D62BFBD2192CA67004A88DA /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		8D62BFBF2192CA6D004A88DA /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		8D62BFC12192CA8C004A88DA /* EventListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListTableViewCell.swift; sourceTree = "<group>"; };
+		8D62BFC32192CAF5004A88DA /* StoresListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresListModel.swift; sourceTree = "<group>"; };
+		8D62BFC52192CAFC004A88DA /* AddStoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStoresViewController.swift; sourceTree = "<group>"; };
+		8D62BFC72192CB04004A88DA /* StoresListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresListTableViewCell.swift; sourceTree = "<group>"; };
+		8D62BFC92192CB0B004A88DA /* StoresListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresListViewController.swift; sourceTree = "<group>"; };
+		8D62BFCB2192D537004A88DA /* AddRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestaurantViewController.swift; sourceTree = "<group>"; };
 		8D761DE8218044E6001D6DEA /* AddDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDataViewController.swift; sourceTree = "<group>"; };
-		8D761DEA218044F2001D6DEA /* AddRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestaurantViewController.swift; sourceTree = "<group>"; };
 		8D761DEC218044F9001D6DEA /* RestaurantListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
 		8D761DEE21804509001D6DEA /* RestaurantListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantListModel.swift; sourceTree = "<group>"; };
 		8D788E852179C8720039123E /* Admin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
@@ -129,10 +155,23 @@
 				8D788E852179C8720039123E /* Admin.storyboard */,
 				2A8F26FF215ACBF90068D3EE /* AppDelegate.swift */,
 				8D761DE8218044E6001D6DEA /* AddDataViewController.swift */,
-				8D761DEA218044F2001D6DEA /* AddRestaurantViewController.swift */,
 				8D761DEC218044F9001D6DEA /* RestaurantListViewController.swift */,
 				8D279A2C2180660900DB78EA /* RestaurantListTableViewCell.swift */,
+				8D62BFCB2192D537004A88DA /* AddRestaurantViewController.swift */,
 				2A8F2701215ACBF90068D3EE /* ViewController.swift */,
+				8D62BFB52192C89B004A88DA /* OfferListModel.swift */,
+				8D62BFB72192C8A7004A88DA /* OfferListViewController.swift */,
+				8D62BFBB2192CA5E004A88DA /* EventListModel.swift */,
+				8D62BFBD2192CA67004A88DA /* AddEventViewController.swift */,
+				8D62BFB32192C892004A88DA /* AddOfferViewController.swift */,
+				8D62BFBF2192CA6D004A88DA /* EventListViewController.swift */,
+				8D62BFC12192CA8C004A88DA /* EventListTableViewCell.swift */,
+				8D62BFB92192C8AE004A88DA /* OfferListTableViewCell.swift */,
+				8D62BFC52192CAFC004A88DA /* AddStoresViewController.swift */,
+				8D62BFB12192C84B004A88DA /* DropDownMenu.swift */,
+				8D62BFC72192CB04004A88DA /* StoresListTableViewCell.swift */,
+				8D62BFC92192CB0B004A88DA /* StoresListViewController.swift */,
+				8D62BFC32192CAF5004A88DA /* StoresListModel.swift */,
 				8D761DEE21804509001D6DEA /* RestaurantListModel.swift */,
 				2A8F2703215ACBF90068D3EE /* Main.storyboard */,
 				0D4AC1DE2191A1F000AE8E0F /* NotifcationsViewController.swift */,
@@ -335,14 +374,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE49FD12164AB2A00F0B112 /* storeService.swift in Sources */,
+				8D62BFBE2192CA68004A88DA /* AddEventViewController.swift in Sources */,
 				2AE49FD3216741D400F0B112 /* StoresTableViewController.swift in Sources */,
+				8D62BFB42192C892004A88DA /* AddOfferViewController.swift in Sources */,
+				8D62BFC62192CAFD004A88DA /* AddStoresViewController.swift in Sources */,
+				8D62BFC02192CA6D004A88DA /* EventListViewController.swift in Sources */,
 				2A8F2702215ACBF90068D3EE /* ViewController.swift in Sources */,
+				8D62BFCC2192D537004A88DA /* AddRestaurantViewController.swift in Sources */,
+				8D62BFB62192C89C004A88DA /* OfferListModel.swift in Sources */,
 				2AE49FCF2164AA0B00F0B112 /* storeProfile.swift in Sources */,
 				2AE49FD52167814200F0B112 /* SubTableViewController.swift in Sources */,
 				2AF868192190B10700509E66 /* Model.xcdatamodeld in Sources */,
+				8D62BFBA2192C8AE004A88DA /* OfferListTableViewCell.swift in Sources */,
 				8D279A2D2180660900DB78EA /* RestaurantListTableViewCell.swift in Sources */,
+				8D62BFB22192C84B004A88DA /* DropDownMenu.swift in Sources */,
 				0D4AC1DF2191A1F000AE8E0F /* NotifcationsViewController.swift in Sources */,
-				8D761DEB218044F3001D6DEA /* AddRestaurantViewController.swift in Sources */,
+				8D62BFC82192CB04004A88DA /* StoresListTableViewCell.swift in Sources */,
+				8D62BFBC2192CA5E004A88DA /* EventListModel.swift in Sources */,
+				8D62BFC22192CA8C004A88DA /* EventListTableViewCell.swift in Sources */,
+				8D62BFB82192C8A7004A88DA /* OfferListViewController.swift in Sources */,
+				8D62BFCA2192CB0B004A88DA /* StoresListViewController.swift in Sources */,
 				2AE49FC8216421EE00F0B112 /* StoreViewController.swift in Sources */,
 				8D761DED218044F9001D6DEA /* RestaurantListViewController.swift in Sources */,
 				2A8F2700215ACBF90068D3EE /* AppDelegate.swift in Sources */,
@@ -352,6 +403,7 @@
 				8D788E882179C8860039123E /* CategoryViewController.swift in Sources */,
 				2A99B4F0217E358B00E32328 /* ProtectedPageViewController.swift in Sources */,
 				8D761DE9218044E6001D6DEA /* AddDataViewController.swift in Sources */,
+				8D62BFC42192CAF5004A88DA /* StoresListModel.swift in Sources */,
 				2AE49FCB21642B6C00F0B112 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

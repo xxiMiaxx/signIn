@@ -1,21 +1,20 @@
 
-
 import UIKit
 import FirebaseDatabase
 import FirebaseStorage
 
 
-class RestaurantListViewController: UIViewController {
+class OfferListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let RestaurantRef = Database.database().reference().child("Restaurants")
-    var restaurantList: [RestaurantListModel] = []
+    let OfferRef = Database.database().reference().child("Offers")
+    var offerList: [OfferListModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Restaurants"
+        self.title = "Offers"
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -25,37 +24,34 @@ class RestaurantListViewController: UIViewController {
         tableView.tableFooterView = UIView()
         
         
-      
        
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewRestaurant(_:)))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewOffer(_:)))
     }
 
     override func viewWillAppear(_ animated: Bool) {
-         self.fetchAllRestaurant()
+         self.fetchAllOffer()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-  
-    @objc func addNewRestaurant(_ sender: UIBarButtonItem) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddRestaurantViewController")
+    @objc func addNewOffer(_ sender: UIBarButtonItem) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddOfferViewController")
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
-
-    func fetchAllRestaurant() {
+    func fetchAllOffer() {
         
-        RestaurantRef.observe(DataEventType.value) { (snapShot) in
-            self.restaurantList.removeAll()
-            
+        OfferRef.observe(DataEventType.value) { (snapShot) in
+            self.offerList.removeAll()
+            debugPrint(snapShot)
             if let value = snapShot.value as? [String: AnyObject] {
                 for key in value.keys {
-    
-                    let model = RestaurantListModel(id: key, value: value[key]!)
-                    self.restaurantList.append(model)
+                    
+                    let model = OfferListModel(id: key, value: value[key]!)
+                    self.offerList.append(model)
                 }
             }
             
@@ -65,15 +61,15 @@ class RestaurantListViewController: UIViewController {
 
 }
 
-extension RestaurantListViewController: UITableViewDelegate, UITableViewDataSource {
+extension OfferListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantList.count
+        return offerList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantListTableViewCell") as! RestaurantListTableViewCell
-        cell.setUpData(model: restaurantList[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OfferListTableViewCell") as! OfferListTableViewCell
+        cell.setUpData(model: offerList[indexPath.row])
         cell.layoutIfNeeded()
         cell.layoutSubviews()
         cell.selectionStyle = .none
@@ -81,10 +77,9 @@ extension RestaurantListViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddRestaurantViewController") as! AddRestaurantViewController
-        vc.mode = .edit(restaurantList[indexPath.row].Id)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddOfferViewController") as! AddOfferViewController
+        vc.mode = .edit(offerList[indexPath.row].Id)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
