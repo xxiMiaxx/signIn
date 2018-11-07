@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D4AC1DF2191A1F000AE8E0F /* NotifcationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AC1DE2191A1F000AE8E0F /* NotifcationsViewController.swift */; };
+		0D9DA8B421932DD800AB9A8D /* FacilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DA8B321932DD800AB9A8D /* FacilitiesViewController.swift */; };
 		0DE32E282173AAF1003CCA03 /* SearchFuncTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */; };
 		2A0FA3992192186B00399629 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FA3982192186B00399629 /* Favorites.swift */; };
 		2A8F2700215ACBF90068D3EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F26FF215ACBF90068D3EE /* AppDelegate.swift */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		0D4AC1DE2191A1F000AE8E0F /* NotifcationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifcationsViewController.swift; sourceTree = "<group>"; };
+		0D9DA8B321932DD800AB9A8D /* FacilitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesViewController.swift; sourceTree = "<group>"; };
 		0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFuncTableViewController.swift; sourceTree = "<group>"; };
 		0F9EAA3B662E31FA6FB9FBDD /* Pods_signIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A0FA3982192186B00399629 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				8D788E852179C8720039123E /* Admin.storyboard */,
 				2A8F26FF215ACBF90068D3EE /* AppDelegate.swift */,
 				8D761DE8218044E6001D6DEA /* AddDataViewController.swift */,
+				0D9DA8B321932DD800AB9A8D /* FacilitiesViewController.swift */,
 				8D761DEC218044F9001D6DEA /* RestaurantListViewController.swift */,
 				8D279A2C2180660900DB78EA /* RestaurantListTableViewCell.swift */,
 				8D62BFCB2192D537004A88DA /* AddRestaurantViewController.swift */,
@@ -393,6 +396,7 @@
 				8D62BFB22192C84B004A88DA /* DropDownMenu.swift in Sources */,
 				0D4AC1DF2191A1F000AE8E0F /* NotifcationsViewController.swift in Sources */,
 				8D62BFC82192CB04004A88DA /* StoresListTableViewCell.swift in Sources */,
+				0D9DA8B421932DD800AB9A8D /* FacilitiesViewController.swift in Sources */,
 				8D62BFBC2192CA5E004A88DA /* EventListModel.swift in Sources */,
 				8D62BFC22192CA8C004A88DA /* EventListTableViewCell.swift in Sources */,
 				8D62BFB82192C8A7004A88DA /* OfferListViewController.swift in Sources */,
