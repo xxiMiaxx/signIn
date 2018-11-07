@@ -141,11 +141,11 @@ class AddStoresViewController: UIViewController, NVActivityIndicatorViewable {
                 if let value = snapshot.value as? [String: AnyObject] {
                     if let Gate = value["Gate"] as? String {
                         self.btnGateNumber.text = Gate
-                        self.btnGateNumber.selectedIndex = 0
+                       // self.btnGateNumber.selectedIndex = 0
                     }
                     if let loc = value["loc"] as? String {
                         self.btnLocation.text = loc
-                        self.btnLocation.selectedIndex = 0
+                     //   self.btnLocation.selectedIndex = 0
                     }
                     self.btnStore.selectedIndex = 0
                     self.btnStore.text = store
@@ -360,7 +360,7 @@ class AddStoresViewController: UIViewController, NVActivityIndicatorViewable {
                 self.StoresRef.child(self.btnStore.text).childByAutoId().setValue(parameters, withCompletionBlock:  { (error, dataRef) in
                     if error == nil {
                         debugPrint(dataRef.key as Any)
-                        self.clearValue()
+                     //   self.clearValue()
                         self.navigationController?.popViewController(animated: true)
                     }
                     else{
@@ -379,7 +379,7 @@ class AddStoresViewController: UIViewController, NVActivityIndicatorViewable {
             StoresRef.child(store).child(id).updateChildValues(parameters) { (error, dataRef) in
                 if error == nil {
                     debugPrint(dataRef.key as Any)
-                    self.clearValue()
+                 //   self.clearValue()
                     self.navigationController?.popViewController(animated: true)
                 }
                 else{

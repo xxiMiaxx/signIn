@@ -100,11 +100,11 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
                 if let value = snapshot.value as? [String: AnyObject] {
                     if let Gate = value["Gate"] as? String {
                         self.btnGateNumber.text = Gate
-                        self.btnGateNumber.selectedIndex = 0
+                       // self.btnGateNumber.selectedIndex = 0
                     }
                     if let loc = value["loc"] as? String {
                         self.btnLocation.text = loc
-                        self.btnLocation.selectedIndex = 0
+                     //   self.btnLocation.selectedIndex = 0
                     }
                     self.txtName.text = value["name"] as? String
                     self.title = value["name"] as? String
@@ -313,7 +313,7 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
                 self.RestaurantRef.childByAutoId().setValue(parameters, withCompletionBlock:  { (error, dataRef) in
                     if error == nil {
                         debugPrint(dataRef.key as Any)
-                        self.clearValue()
+                       // self.clearValue()
                         self.navigationController?.popViewController(animated: true)
                     }
                     else{
@@ -332,7 +332,7 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
             RestaurantRef.child(id).updateChildValues(parameters) { (error, dataRef) in
                 if error == nil {
                     debugPrint(dataRef.key as Any)
-                    self.clearValue()
+                  //  self.clearValue()
                     self.navigationController?.popViewController(animated: true)
                 }
                 else{

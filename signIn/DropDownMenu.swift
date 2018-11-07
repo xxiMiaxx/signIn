@@ -14,9 +14,20 @@ class DropDownMenu: UIButton {
         }
         set {
             setTitle(newValue, for: .normal)
+            self.selectedIndex = getselectedIndex()
+
         }
     }
-    
+    func getselectedIndex()->Int{
+        var index = 0
+        for i in items {
+            if (i == text){
+                return index
+            }
+            index+=1
+        }
+        return index
+    }
     @IBInspectable var visibleItemCount: Int = 5
     var direction: DropDownDirection = .bottom
     
