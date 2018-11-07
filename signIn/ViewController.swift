@@ -113,6 +113,8 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
                             self.performSegue(withIdentifier: "showAdminHome", sender: self)
                         }
                         else{
+                           // Auth.auth().createUser(withEmail: email, password: pass)
+                            //self.saveProfile(email: email , password:pass)
                             self.performSegue(withIdentifier: "goToHome", sender: self)
                         }
                     }
@@ -149,6 +151,7 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
                             self.performSegue(withIdentifier: "showAdminHome", sender: self)
                         }
                         else{
+                            self.saveProfile(email: email , password:pass)
                             self.performSegue(withIdentifier: "goToHome", sender: self)
                         }
                     }
@@ -167,6 +170,24 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
         let url: NSURL = URL(string: "TEL://00966920009467")! as NSURL
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     
+    }
+    
+    
+    //Save user
+    func saveProfile(email:String, password: String) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+        
+        let userObject = [
+            "email": email,
+            "password": password
+            ] as [String:Any]
+        
+        databaseRef.setValue(userObject) { error, ref in
+        
+        }
+        
+        print("HHHHHHHHHhgjgjyghtffdrdrdhg")
     }
     
 }

@@ -13,7 +13,7 @@ class PostTableViewCell: UITableViewCell {
     //Fav
     
     var link: SubTableViewController?
-    
+    var isFavorite = false
     
     //Fav
     
@@ -84,12 +84,43 @@ class PostTableViewCell: UITableViewCell {
     //btnHeart.tintColor = .red
     }
     
+   
+    
+    
+
+    
+    
+    
+    
     @objc private func handleMarkAsFavorite() {
 //print("Marking as favorite")
+         buttonPressed()
          link?.someMethodIWantToCall(cell: self)
         
     }
     
+    func buttonPressed() {
+        activateButton(bool: !isFavorite)
+    }
     
+    func activateButton(bool: Bool) {
+        
+        isFavorite = bool
+        
+        
+        let btnImage = UIButton()
+        if(isFavorite ){
+          //  btnImage.setImage(UIImage(named: "heart-selected"), for: .normal)
+           // favBtn.customView = btnImage
+            favBtn.setImage(UIImage(named: "heart-selected"), for: .normal)
+        }
+        else{
+           // btnImage.setImage(UIImage(named: "heart-unselected"), for: .normal)
+           // favBtn.customView = btnImage
+            favBtn.setImage(UIImage(named: "heart-unselected"), for: .normal)
+        }
+        
+        
+    }
     
 }

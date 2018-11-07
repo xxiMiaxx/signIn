@@ -64,7 +64,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SHb-3g-SnW">
                                             <rect key="frame" x="20" y="10" width="360" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="icons8-heart-outline-24"/>
+                                            <state key="normal" image="heart-unselected"/>
                                         </button>
                                     </barButtonItem>
                                 </items>
@@ -109,7 +109,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icons8-heart-outline-24" width="24" height="24"/>
+        <image name="heart-unselected" width="24" height="24"/>
         <image name="icons8-marker-filled-50" width="50" height="50"/>
     </resources>
 </document>

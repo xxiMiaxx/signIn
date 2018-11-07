@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseDatabase
 
 class SubTableViewController: UITableViewController {
     
     //Fav
+    
+    var Favorites:Favorites?
     
     func someMethodIWantToCall(cell: UITableViewCell) {
        // print("Inside of ViewController now...")
@@ -22,8 +25,46 @@ class SubTableViewController: UITableViewController {
         
        
        //print(name)
-       let name = posts[indexPathTapped!.row].name
+       let name = posts[indexPathTapped!.row].name as!String
+       let loc = posts[indexPathTapped!.row].loc as!String
+       let photoURL = posts[indexPathTapped!.row].photoURL.absoluteString as!String
+       let phone = posts[indexPathTapped!.row].phone as!String
+          let userID = Auth.auth().currentUser?.uid
+        let favObject = [
+            //"userID":userID,
+            "userID":userID ,
+            "name": name,
+            "loc": loc,
+            "photoURL":photoURL,
+            "phone":phone
+            ]
+
         print(name)
+        print(loc)
+        print(phone)
+      
+       // print(userID)
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Database.database().reference().child("users/favList").childByAutoId()
+        databaseRef.setValue(favObject)
+        //Fav
+     
+        
+        
+        
+        //FavArray
+       // var favPosts = [Post]()
+       // let post = Post(name: name , photoURL: photoURL, phone:  phone ,loc:loc)
+        //favPosts.append(post)
+       // Favorites.tableView.reloadData()
+        //Favorites.tableView(favPosts)
+        //Favorites.initialize(favPosts) 
+        //Favorites?.observePosts(tempPosts: favPosts)
+        
+        
+        
+        
+        
         
 
         

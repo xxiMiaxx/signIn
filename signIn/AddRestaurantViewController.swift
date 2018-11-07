@@ -88,10 +88,10 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
                     self.txtName.text = value["name"] as? String
                     self.txtPhoneNumber.text = value["phone"] as? String
                     let RestaurantURL: String = value["photoURL"] as? String ?? ""
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
                 
->>>>>>> 3957a63e187d404b0d0b2e5c70a1fb1822b52cc5
+//>>>>>>> 3957a63e187d404b0d0b2e5c70a1fb1822b52cc5
                     self.title = value["name"] as? String
                     guard RestaurantURL.count != 0 else {
                         return
@@ -105,11 +105,11 @@ class AddRestaurantViewController: UIViewController, NVActivityIndicatorViewable
                         SDWebImageManager.shared().loadImage(with: url, options: SDWebImageOptions.refreshCached, progress: nil, completed: { (image, _, error, _, _, _) in
                             
                             if let pic = image {
-<<<<<<< HEAD
+//<<<<<<< HEAD
                                // self.imageSelected = pic
-=======
+//=======
                                 self.imageSelected = pic
->>>>>>> 3957a63e187d404b0d0b2e5c70a1fb1822b52cc5
+//>>>>>>> 3957a63e187d404b0d0b2e5c70a1fb1822b52cc5
                                 self.resImageView.image = pic
                             }
                             else{
