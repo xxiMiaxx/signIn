@@ -31,6 +31,15 @@
 		2AE49FD12164AB2A00F0B112 /* storeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD02164AB2A00F0B112 /* storeService.swift */; };
 		2AE49FD3216741D400F0B112 /* StoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */; };
 		2AE49FD52167814200F0B112 /* SubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE49FD42167814200F0B112 /* SubTableViewController.swift */; };
+		2AEACAB9219972390030F064 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEACAB8219972380030F064 /* EventsTableViewController.swift */; };
+		2AEACABF2199734D0030F064 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEACABE2199734D0030F064 /* EventsTableViewController.swift */; };
+		2AEACAC12199735C0030F064 /* OffersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEACAC02199735C0030F064 /* OffersTableViewCell.xib */; };
+		2AEACAC3219973690030F064 /* OffersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEACAC2219973680030F064 /* OffersTableViewController.swift */; };
+		2AEACAC52199755C0030F064 /* OffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEACAC42199755C0030F064 /* OffersTableViewCell.swift */; };
+		2AEACAC7219975A50030F064 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEACAC6219975A50030F064 /* TableViewCell.swift */; };
+		2AEACAC9219975CD0030F064 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEACAC8219975CD0030F064 /* TableViewCell.xib */; };
+		2AEACACB2199760D0030F064 /* event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEACACA2199760D0030F064 /* event.swift */; };
+		2AEACACD219976290030F064 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEACACC219976280030F064 /* Offer.swift */; };
 		2AF868192190B10700509E66 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AF868172190B10700509E66 /* Model.xcdatamodeld */; };
 		8D279A2D2180660900DB78EA /* RestaurantListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D279A2C2180660900DB78EA /* RestaurantListTableViewCell.swift */; };
 		8D62BFB22192C84B004A88DA /* DropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFB12192C84B004A88DA /* DropDownMenu.swift */; };
@@ -94,6 +103,15 @@
 		2AE49FD02164AB2A00F0B112 /* storeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeService.swift; sourceTree = "<group>"; };
 		2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresTableViewController.swift; sourceTree = "<group>"; };
 		2AE49FD42167814200F0B112 /* SubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTableViewController.swift; sourceTree = "<group>"; };
+		2AEACAB8219972380030F064 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		2AEACABE2199734D0030F064 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		2AEACAC02199735C0030F064 /* OffersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersTableViewCell.xib; sourceTree = "<group>"; };
+		2AEACAC2219973680030F064 /* OffersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersTableViewController.swift; sourceTree = "<group>"; };
+		2AEACAC42199755C0030F064 /* OffersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersTableViewCell.swift; sourceTree = "<group>"; };
+		2AEACAC6219975A50030F064 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		2AEACAC8219975CD0030F064 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		2AEACACA2199760D0030F064 /* event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = event.swift; sourceTree = "<group>"; };
+		2AEACACC219976280030F064 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		2AF868182190B10700509E66 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		74C04964CC472C4CEA347066 /* Pods-signIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-signIn/Pods-signIn.release.xcconfig"; sourceTree = "<group>"; };
 		8D279A2C2180660900DB78EA /* RestaurantListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantListTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,15 +187,24 @@
 				8D62BFBB2192CA5E004A88DA /* EventListModel.swift */,
 				8D62BFBD2192CA67004A88DA /* AddEventViewController.swift */,
 				8D62BFB32192C892004A88DA /* AddOfferViewController.swift */,
+				2AEACABE2199734D0030F064 /* EventsTableViewController.swift */,
+				2AEACAC02199735C0030F064 /* OffersTableViewCell.xib */,
+				2AEACAC2219973680030F064 /* OffersTableViewController.swift */,
 				8D62BFBF2192CA6D004A88DA /* EventListViewController.swift */,
 				8D62BFC12192CA8C004A88DA /* EventListTableViewCell.swift */,
 				8D62BFB92192C8AE004A88DA /* OfferListTableViewCell.swift */,
+				2AEACAB8219972380030F064 /* EventsTableViewController.swift */,
 				8D62BFC52192CAFC004A88DA /* AddStoresViewController.swift */,
 				8D62BFB12192C84B004A88DA /* DropDownMenu.swift */,
 				8D62BFC72192CB04004A88DA /* StoresListTableViewCell.swift */,
 				8D62BFC92192CB0B004A88DA /* StoresListViewController.swift */,
 				8D62BFC32192CAF5004A88DA /* StoresListModel.swift */,
+				2AEACAC42199755C0030F064 /* OffersTableViewCell.swift */,
+				2AEACAC6219975A50030F064 /* TableViewCell.swift */,
+				2AEACACC219976280030F064 /* Offer.swift */,
+				2AEACAC8219975CD0030F064 /* TableViewCell.xib */,
 				8D761DEE21804509001D6DEA /* RestaurantListModel.swift */,
+				2AEACACA2199760D0030F064 /* event.swift */,
 				2A8F2703215ACBF90068D3EE /* Main.storyboard */,
 				0D4AC1DE2191A1F000AE8E0F /* NotifcationsViewController.swift */,
 				2A99B4EF217E358B00E32328 /* ProtectedPageViewController.swift */,
@@ -290,10 +317,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AEACAC12199735C0030F064 /* OffersTableViewCell.xib in Resources */,
 				2A8F270A215ACBFA0068D3EE /* LaunchScreen.storyboard in Resources */,
 				2AE49FC2216412A500F0B112 /* PostTableViewCell.xib in Resources */,
 				2A8F2712215ACD480068D3EE /* GoogleService-Info.plist in Resources */,
 				2A8F2707215ACBFA0068D3EE /* Assets.xcassets in Resources */,
+				2AEACAC9219975CD0030F064 /* TableViewCell.xib in Resources */,
 				8D788E862179C8720039123E /* Admin.storyboard in Resources */,
 				2A8F2705215ACBF90068D3EE /* Main.storyboard in Resources */,
 			);
@@ -379,18 +408,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AEACAC7219975A50030F064 /* TableViewCell.swift in Sources */,
 				2AE49FD12164AB2A00F0B112 /* storeService.swift in Sources */,
 				8D62BFBE2192CA68004A88DA /* AddEventViewController.swift in Sources */,
+				2AEACABF2199734D0030F064 /* EventsTableViewController.swift in Sources */,
 				2AE49FD3216741D400F0B112 /* StoresTableViewController.swift in Sources */,
 				8D62BFB42192C892004A88DA /* AddOfferViewController.swift in Sources */,
 				8D62BFC62192CAFD004A88DA /* AddStoresViewController.swift in Sources */,
 				8D62BFC02192CA6D004A88DA /* EventListViewController.swift in Sources */,
 				2A8F2702215ACBF90068D3EE /* ViewController.swift in Sources */,
 				8D62BFCC2192D537004A88DA /* AddRestaurantViewController.swift in Sources */,
+				2AEACAB9219972390030F064 /* EventsTableViewController.swift in Sources */,
 				8D62BFB62192C89C004A88DA /* OfferListModel.swift in Sources */,
 				2AE49FCF2164AA0B00F0B112 /* storeProfile.swift in Sources */,
 				2AE49FD52167814200F0B112 /* SubTableViewController.swift in Sources */,
 				2AF868192190B10700509E66 /* Model.xcdatamodeld in Sources */,
+				2AEACAC52199755C0030F064 /* OffersTableViewCell.swift in Sources */,
 				8D62BFBA2192C8AE004A88DA /* OfferListTableViewCell.swift in Sources */,
 				8D279A2D2180660900DB78EA /* RestaurantListTableViewCell.swift in Sources */,
 				8D62BFB22192C84B004A88DA /* DropDownMenu.swift in Sources */,
@@ -399,7 +432,10 @@
 				0D9DA8B421932DD800AB9A8D /* FacilitiesViewController.swift in Sources */,
 				8D62BFBC2192CA5E004A88DA /* EventListModel.swift in Sources */,
 				8D62BFC22192CA8C004A88DA /* EventListTableViewCell.swift in Sources */,
+				2AEACACB2199760D0030F064 /* event.swift in Sources */,
+				2AEACACD219976290030F064 /* Offer.swift in Sources */,
 				8D62BFB82192C8A7004A88DA /* OfferListViewController.swift in Sources */,
+				2AEACAC3219973690030F064 /* OffersTableViewController.swift in Sources */,
 				8D62BFCA2192CB0B004A88DA /* StoresListViewController.swift in Sources */,
 				2AE49FC8216421EE00F0B112 /* StoreViewController.swift in Sources */,
 				8D761DED218044F9001D6DEA /* RestaurantListViewController.swift in Sources */,

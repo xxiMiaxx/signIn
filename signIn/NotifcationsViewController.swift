@@ -19,7 +19,7 @@ class NotificationsViewController: UIViewController {
         })
         let content = UNMutableNotificationContent()
         content.title = "Amazing Offers 50% off !"
-        content.subtitle = "Sephora crazy offers for black friday !"
+        content.subtitle = "Check out Riyadh Park black friday offers !"
         content.body = ""
         content.badge = 1
         

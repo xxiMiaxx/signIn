@@ -13,12 +13,17 @@ import GoogleSignIn
 
 class ViewController: UIViewController , GIDSignInUIDelegate   {
     
+    
+    var userNameArray = [String]()
     @IBOutlet weak var signInSelector: UISegmentedControl!
     
     @IBOutlet weak var signInLable: UILabel!
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userNameTextField: UITextField!
     
     @IBOutlet weak var confirmPassLable: UILabel!
     @IBOutlet weak var confirmPassTextField: UITextField!
@@ -39,6 +44,8 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
         
         confirmPassTextField.isHidden=true
         confirmPassLable.isHidden=true
+        userName.isHidden=true
+        userNameTextField.isHidden=true
         
     }
     
@@ -56,12 +63,16 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
             signInButton.setTitle("Sign In", for: .normal)
             confirmPassTextField.isHidden=true
             confirmPassLable.isHidden=true
+            userName.isHidden=true
+            userNameTextField.isHidden=true
         }
         else {
             signInLable.text = "sign up"
             signInButton.setTitle("sign up", for: .normal)
             confirmPassTextField.isHidden=false
             confirmPassLable.isHidden=false
+            userName.isHidden=false
+            userNameTextField.isHidden=false
         }
     }
     
@@ -121,6 +132,24 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
                 }
             }
             else {
+               var userNameText = userNameTextField.text
+                var wasExist = isExist(userNameText: userNameText!)
+                
+                if wasExist {
+                    print ("exist")
+                    let alert = UIAlertController(title: "", message: "EXIST", preferredStyle: .alert)
+                    let action1 = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                        print("Action")
+                    })
+                    alert.addAction(action1)
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    return
+                }
+                else {//
+                   print ("not exist")
+                
+                
                 if pass != self.confirmPassTextField.text {
                     let alert = UIAlertController(title: "", message: "Your password and confirmation passwoed do not match ", preferredStyle: .alert)
                     let action1 = UIAlertAction(title: "OK", style: .default, handler: { (action) in
@@ -151,12 +180,13 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
                             self.performSegue(withIdentifier: "showAdminHome", sender: self)
                         }
                         else{
-                            self.saveProfile(email: email , password:pass)
+                            self.saveProfile(email: email , password:pass , userNameText:userNameText!)
                             self.performSegue(withIdentifier: "goToHome", sender: self)
                         }
                     }
                 }
-            }
+                }//
+           }
         }
     }
     
@@ -174,13 +204,14 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
     
     
     //Save user
-    func saveProfile(email:String, password: String) {
+    func saveProfile(email:String, password: String, userNameText: String)  {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let databaseRef = Database.database().reference().child("users/profile/\(uid)")
         
         let userObject = [
             "email": email,
-            "password": password
+            "password": password,
+            "userName": userNameText
             ] as [String:Any]
         
         databaseRef.setValue(userObject) { error, ref in
@@ -188,6 +219,52 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
         }
         
         print("HHHHHHHHHhgjgjyghtffdrdrdhg")
+    }
+    func isExist(userNameText: String) ->Bool{
+        var wasExist = Bool()
+        //////user Name START
+        print("END")
+        print(self.userNameArray.count)
+        
+        print("START1")
+        let users = Database.database().reference().child("users/profile")
+        print("START2")
+        users.observe(.value, with: { (snapshot) in
+            print("START3")
+            var userNames = [String]()
+            
+            print("STAR4")
+            for child in snapshot.children {
+                if  let childSnapshot = child as? DataSnapshot ,
+                    let dict = childSnapshot.value as? [String:Any] ,
+                    let userName = dict["userName"] as? String{
+                    userNames.append(userName)
+                    print("userName")
+                    print(userName + "1")
+                }
+            }
+            self.userNameArray=userNames
+        })
+        
+        for name in self.userNameArray {
+            print("AARRWWAA")
+            print(name)
+            if name.isEqual(userNameText){
+                wasExist = true
+                print("name")
+                print(name)
+                break
+            } else {
+                wasExist = false
+                print("name")
+                print(name)
+            }
+            
+        }
+        
+        return wasExist
+        ///////user Name END
+        
     }
     
 }

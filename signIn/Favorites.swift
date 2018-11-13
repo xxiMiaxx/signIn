@@ -11,6 +11,7 @@ import FirebaseDatabase
 import Firebase
 class Favorites : UITableViewController {
     
+    @IBOutlet weak var pageTitle: UINavigationItem!
     var posts = [Post]()
     var cellName = String()
     var SubTable:SubTableViewController?
@@ -18,6 +19,9 @@ class Favorites : UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        //self.pageTitle.title.
+        
+        
         
         //new
         
