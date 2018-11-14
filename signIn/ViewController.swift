@@ -214,8 +214,36 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
             "userName": userNameText
             ] as [String:Any]
         
+        ///
+        var userNameText = userNameTextField.text
+        var wasExist = isExist(userNameText: userNameText!)
+        
+        if wasExist {
+            print ("exist")
+            let user = Auth.auth().currentUser
+            
+            user?.delete { error in
+                if let error = error {
+                    // An error happened.
+                } else {
+                    // Account deleted.
+                }
+            }
+         
+            let alert = UIAlertController(title: "", message: "Sorry , that username already exist!", preferredStyle: .alert)
+            let action1 = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                print("Action")
+            })
+            alert.addAction(action1)
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
+        else {//
+        
         databaseRef.setValue(userObject) { error, ref in
         
+        }
         }
         
         print("HHHHHHHHHhgjgjyghtffdrdrdhg")
