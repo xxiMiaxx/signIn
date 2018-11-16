@@ -14,17 +14,13 @@ class SubTableViewController: UITableViewController {
     
     //Fav
     
-    var Favorites:Favorites?
+    //var Favorites:Favorites?
+    var link: PostTableViewCell?
     
     func someMethodIWantToCall(cell: UITableViewCell) {
-       // print("Inside of ViewController now...")
-        let indexPathTapped = tableView.indexPath(for: cell)
-        //print(indexPathTapped)
-        
-      // let name = twoDimensionalArray[indexPathTapped!.section].names[indexPathTapped!.row]
-        
        
-       //print(name)
+        let indexPathTapped = tableView.indexPath(for: cell)
+     
        let name = posts[indexPathTapped!.row].name as!String
        let loc = posts[indexPathTapped!.row].loc as!String
        let photoURL = posts[indexPathTapped!.row].photoURL.absoluteString as!String
@@ -38,42 +34,49 @@ class SubTableViewController: UITableViewController {
             "photoURL":photoURL,
             "phone":phone
             ]
-
-        print(name)
-        print(loc)
-        print(phone)
-      
-       // print(userID)
+        
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let databaseRef = Database.database().reference().child("users/favList").childByAutoId()
         databaseRef.setValue(favObject)
-        //Fav
-     
-        
-        
-        
-        //FavArray
-       // var favPosts = [Post]()
-       // let post = Post(name: name , photoURL: photoURL, phone:  phone ,loc:loc)
-        //favPosts.append(post)
-       // Favorites.tableView.reloadData()
-        //Favorites.tableView(favPosts)
-        //Favorites.initialize(favPosts) 
-        //Favorites?.observePosts(tempPosts: favPosts)
-        
-        
-        
-        
-        
-        
-
-        
-        
-        
+       
         
     }
     
-    //Fav
+    func someMethodIWantToCallDelete(cell: UITableViewCell) {
+        
+        let indexPathTapped = tableView.indexPath(for: cell)
+        
+        let selectedName = posts[indexPathTapped!.row].name as!String
+        
+        let favRef = Database.database().reference().child("users/favList")
+        favRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            var tempPosts = [Post]()
+            let currentUserID = Auth.auth().currentUser?.uid
+            
+            for child in snapshot.children {
+                if  let childSnapshot = child as? DataSnapshot ,
+                    let dict = childSnapshot.value as? [String:Any] ,
+                    let userID = dict["userID"] as? String ,
+                    let name = dict["name"] as? String ,
+                    let photoURL = dict["photoURL"] as? String ,
+                    let loc = dict["loc"] as? String ,
+                    let phone = dict["phone"] as? String ,
+                    let url = URL(string:photoURL) {
+                    if userID == currentUserID && name==selectedName {
+                     let childRef = childSnapshot.ref
+                        childRef.removeValue()
+                        
+                    }
+                }
+            }
+            
+            
+            
+        })
+        
+    }// end
+    
 
     @IBOutlet weak var categoryName: UINavigationItem!
     var posts = [Post]()
@@ -84,27 +87,10 @@ class SubTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryName.title = cellName
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        //
-        //new
-        
         tableView = UITableView(frame: view.bounds, style: .plain)
-        
-        // tableView.backgroundColor = UIColor.blue
         
         let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "postCell")
-        
-        //view.addSubview(tableView)
-        // tableView.addSubview(tableView)
-        
-        
-        
         
         var layoutGuide:UILayoutGuide!
         layoutGuide=view.safeAreaLayoutGuide
@@ -123,8 +109,8 @@ class SubTableViewController: UITableViewController {
         
         observePosts()
         tableView.reloadData()
-        
-        
+       // tableView.allowsSelection = false
+       
         
     }
     
@@ -231,6 +217,7 @@ class SubTableViewController: UITableViewController {
                     let url = URL(string:photoURL) {
                     let post = Post(name: name , photoURL: url , phone:  phone ,loc:loc)
                     tempPosts.append(post)
+                    
                 }
             }
             

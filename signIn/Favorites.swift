@@ -10,33 +10,56 @@ import UIKit
 import FirebaseDatabase
 import Firebase
 class Favorites : UITableViewController {
-    
+
     @IBOutlet weak var pageTitle: UINavigationItem!
     var posts = [Post]()
     var cellName = String()
-    var SubTable:SubTableViewController?
+    var link:SubTableViewController?
+ 
+    
+    
+    func someMethodIWantToCallDelete(cell: UITableViewCell) {
+       
+        let indexPathTapped = tableView.indexPath(for: cell)
+        
+        let selectedName = posts[indexPathTapped!.row].name as!String
+        
+        let favRef = Database.database().reference().child("users/favList")
+        favRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            let currentUserID = Auth.auth().currentUser?.uid
+            
+            for child in snapshot.children {
+                if  let childSnapshot = child as? DataSnapshot ,
+                    let dict = childSnapshot.value as? [String:Any] ,
+                    let userID = dict["userID"] as? String ,
+                    let name = dict["name"] as? String ,
+                    let photoURL = dict["photoURL"] as? String ,
+                    let url = URL(string:photoURL) {
+                    if userID == currentUserID && name==selectedName {
+                        let childRef = childSnapshot.ref
+                        childRef.removeValue()
+                        
+                    }
+                }
+            }
+            
+            
+            
+        })
+        print("End")
+    }// end
+    
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        //self.pageTitle.title.
-        
-        
-        
-        //new
+      
         
         tableView = UITableView(frame: view.bounds, style: .plain)
-        
-        // tableView.backgroundColor = UIColor.blue
-        
-       let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
+        let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "postCell")
-        
-        //view.addSubview(tableView)
-        // tableView.addSubview(tableView)
-        
-        
-        
+       
         
         var layoutGuide:UILayoutGuide!
         layoutGuide=view.safeAreaLayoutGuide
@@ -51,7 +74,6 @@ class Favorites : UITableViewController {
         
         
         var cellLabel: UILabel!
-        //cellLabel = UILabel(frame: CGRectMake(self.tableView.frame.width - 100, 10, 100.0, 40))
         cellLabel = UILabel(frame: CGRect(x: 150, y: 0, width: self.tableView.frame.width, height: 20))
         cellLabel.textColor = UIColor.red
         cellLabel.text="Arwa"
@@ -63,10 +85,7 @@ class Favorites : UITableViewController {
         
         tableView.tableFooterView = UIView()
         tableView.reloadData()
-       //let favPosts = [Post]()
-        //self.posts = favPosts
-        //observePosts(tempPosts: SubTable?.Favorites?.posts ?? favPosts )
-        //tableView.reloadData()
+    
          observePosts1()
         
         
@@ -95,26 +114,21 @@ class Favorites : UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
-        //cell.link = self
+       // cell.link = self
         cell.set(post: self.posts[indexPath.row])
         return cell
         
         
     }
     
-    func observePosts(tempPosts:[Post]){
-        
-        self.posts = tempPosts
-        self.tableView.reloadData()
-        
-    }
+
     
     
     func observePosts1(){
         
         
     
-        let favRef = Database.database().reference().child("users/favList")
+       let favRef = Database.database().reference().child("users/favList")
         
         
        favRef.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -132,11 +146,6 @@ class Favorites : UITableViewController {
                     let phone = dict["phone"] as? String ,
                     let url = URL(string:photoURL) {
                     if userID == currentUserID {
-                      //print("userID")
-                      //print(userID)
-                      //print("currentUserID")
-                      //print(currentUserID)
-                    
                       let post = Post(name: name , photoURL: url , phone:  phone ,loc:loc)
                       tempPosts.append(post)
                     }

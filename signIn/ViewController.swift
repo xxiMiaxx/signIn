@@ -246,7 +246,7 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
         }
         }
         
-        print("HHHHHHHHHhgjgjyghtffdrdrdhg")
+       
     }
     func isExist(userNameText: String) ->Bool{
         var wasExist = Bool()

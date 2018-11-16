@@ -14,6 +14,7 @@ class Post {
     var loc: String
     var photoURL: URL
     var phone:String
+    
    
     
     init (name:String , photoURL: URL , phone:String , loc: String) {
