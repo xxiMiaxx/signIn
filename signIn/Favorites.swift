@@ -39,6 +39,9 @@ class Favorites : UITableViewController {
                     if userID == currentUserID && name==selectedName {
                         let childRef = childSnapshot.ref
                         childRef.removeValue()
+                        self.observePosts1()
+                        self.link?.observePosts()
+                        
                         
                     }
                 }
@@ -56,19 +59,19 @@ class Favorites : UITableViewController {
         super.viewDidLoad()
       
         
-        tableView = UITableView(frame: view.bounds, style: .plain)
-        let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "postCell")
+        self.tableView = UITableView(frame: view.bounds, style: .plain)
+        let cellNib = UINib(nibName: "PostTableViewCellFav", bundle: nil)
+         self.tableView.register(cellNib, forCellReuseIdentifier: "Fav")
        
         
         var layoutGuide:UILayoutGuide!
         layoutGuide=view.safeAreaLayoutGuide
         
         
-        tableView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor).isActive = true
-        tableView.topAnchor.constraint(equalTo: layoutGuide.topAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor).isActive = true
+         self.tableView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor).isActive = true
+         self.tableView.topAnchor.constraint(equalTo: layoutGuide.topAnchor).isActive = true
+         self.tableView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor).isActive = true
+         self.tableView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor).isActive = true
         
         //Lable from storyboard
         
@@ -78,13 +81,13 @@ class Favorites : UITableViewController {
         cellLabel.textColor = UIColor.red
         cellLabel.text="Arwa"
        
-      // tableView.addSubview(UIStoryboard)
+     
       
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.delegate = self
+         self.tableView.dataSource = self
         
-        tableView.tableFooterView = UIView()
-        tableView.reloadData()
+         self.tableView.tableFooterView = UIView()
+         self.tableView.reloadData()
     
          observePosts1()
         
@@ -113,8 +116,8 @@ class Favorites : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
-       // cell.link = self
+        let cell =  self.tableView.dequeueReusableCell(withIdentifier: "Fav", for: indexPath) as! PostTableViewCellFav
+        cell.Link = self
         cell.set(post: self.posts[indexPath.row])
         return cell
         

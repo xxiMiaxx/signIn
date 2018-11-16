@@ -131,6 +131,7 @@ class SubTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
         cell.link = self
+
         cell.set(post: self.posts[indexPath.row])
         return cell
         
@@ -192,11 +193,16 @@ class SubTableViewController: UITableViewController {
      }
      */
     
-    
-    
+   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        observePosts()
+        tableView.reloadData()
+    }
+   
     func observePosts(){
         
-        
+        print("Start2")
         
         let postRef = Database.database().reference().child(cellName)
         
@@ -205,7 +211,7 @@ class SubTableViewController: UITableViewController {
             
             var tempPosts = [Post]()
             
-            
+             print("Start3")
             for child in snapshot.children {
                 if  let childSnapshot = child as? DataSnapshot ,
                     let dict = childSnapshot.value as? [String:Any] ,
@@ -224,7 +230,7 @@ class SubTableViewController: UITableViewController {
             self.posts = tempPosts
             self.tableView.reloadData()
             
-            
+            print("Start4")
         })
         
     }
