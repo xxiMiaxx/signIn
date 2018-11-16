@@ -78,7 +78,11 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         case "Events":
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "EventListViewController")
             self.navigationController?.pushViewController(vc!, animated: true)
-            break
+          //  break
+            
+        case "Facilites":
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "FaciliteListViewController")
+            self.navigationController?.pushViewController(vc!, animated: true)
             
         case "Logout":
           

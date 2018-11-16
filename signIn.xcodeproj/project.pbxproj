@@ -45,6 +45,10 @@
 		2AEACACB2199760D0030F064 /* event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEACACA2199760D0030F064 /* event.swift */; };
 		2AEACACD219976290030F064 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEACACC219976280030F064 /* Offer.swift */; };
 		2AF868192190B10700509E66 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AF868172190B10700509E66 /* Model.xcdatamodeld */; };
+		8D14E95D219EDC41009E28DE /* AddFaciliteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E95C219EDC41009E28DE /* AddFaciliteViewController.swift */; };
+		8D14E95F219EDC45009E28DE /* FaciliteListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E95E219EDC45009E28DE /* FaciliteListModel.swift */; };
+		8D14E961219EDC4A009E28DE /* FaciliteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E960219EDC4A009E28DE /* FaciliteListTableViewCell.swift */; };
+		8D14E963219EDC88009E28DE /* FaciliteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E962219EDC88009E28DE /* FaciliteListViewController.swift */; };
 		8D279A2D2180660900DB78EA /* RestaurantListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D279A2C2180660900DB78EA /* RestaurantListTableViewCell.swift */; };
 		8D62BFB22192C84B004A88DA /* DropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFB12192C84B004A88DA /* DropDownMenu.swift */; };
 		8D62BFB42192C892004A88DA /* AddOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62BFB32192C892004A88DA /* AddOfferViewController.swift */; };
@@ -124,6 +128,10 @@
 		2AEACACC219976280030F064 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		2AF868182190B10700509E66 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		74C04964CC472C4CEA347066 /* Pods-signIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-signIn/Pods-signIn.release.xcconfig"; sourceTree = "<group>"; };
+		8D14E95C219EDC41009E28DE /* AddFaciliteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFaciliteViewController.swift; sourceTree = "<group>"; };
+		8D14E95E219EDC45009E28DE /* FaciliteListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaciliteListModel.swift; sourceTree = "<group>"; };
+		8D14E960219EDC4A009E28DE /* FaciliteListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaciliteListTableViewCell.swift; sourceTree = "<group>"; };
+		8D14E962219EDC88009E28DE /* FaciliteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaciliteListViewController.swift; sourceTree = "<group>"; };
 		8D279A2C2180660900DB78EA /* RestaurantListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantListTableViewCell.swift; sourceTree = "<group>"; };
 		8D62BFB12192C84B004A88DA /* DropDownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownMenu.swift; sourceTree = "<group>"; };
 		8D62BFB32192C892004A88DA /* AddOfferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOfferViewController.swift; sourceTree = "<group>"; };
@@ -216,10 +224,14 @@
 				2AEACAC42199755C0030F064 /* OffersTableViewCell.swift */,
 				2AEACAC6219975A50030F064 /* TableViewCell.swift */,
 				2AEACACC219976280030F064 /* Offer.swift */,
+				8D14E95C219EDC41009E28DE /* AddFaciliteViewController.swift */,
+				8D14E95E219EDC45009E28DE /* FaciliteListModel.swift */,
 				2AEACAC8219975CD0030F064 /* TableViewCell.xib */,
 				8D761DEE21804509001D6DEA /* RestaurantListModel.swift */,
+				8D14E960219EDC4A009E28DE /* FaciliteListTableViewCell.swift */,
 				2AEACACA2199760D0030F064 /* event.swift */,
 				2A8F2703215ACBF90068D3EE /* Main.storyboard */,
+				8D14E962219EDC88009E28DE /* FaciliteListViewController.swift */,
 				0D4AC1DE2191A1F000AE8E0F /* NotifcationsViewController.swift */,
 				2A99B4EF217E358B00E32328 /* ProtectedPageViewController.swift */,
 				0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */,
@@ -441,6 +453,7 @@
 				2AEACAB9219972390030F064 /* EventsTableViewController.swift in Sources */,
 				8D62BFB62192C89C004A88DA /* OfferListModel.swift in Sources */,
 				2AE49FCF2164AA0B00F0B112 /* storeProfile.swift in Sources */,
+				8D14E95F219EDC45009E28DE /* FaciliteListModel.swift in Sources */,
 				2AE49FD52167814200F0B112 /* SubTableViewController.swift in Sources */,
 				2AF868192190B10700509E66 /* Model.xcdatamodeld in Sources */,
 				2AEACAC52199755C0030F064 /* OffersTableViewCell.swift in Sources */,
@@ -451,11 +464,14 @@
 				8D62BFC82192CB04004A88DA /* StoresListTableViewCell.swift in Sources */,
 				0D9DA8B421932DD800AB9A8D /* FacilitiesViewController.swift in Sources */,
 				8D62BFBC2192CA5E004A88DA /* EventListModel.swift in Sources */,
+				8D14E95D219EDC41009E28DE /* AddFaciliteViewController.swift in Sources */,
+				8D14E963219EDC88009E28DE /* FaciliteListViewController.swift in Sources */,
 				8D62BFC22192CA8C004A88DA /* EventListTableViewCell.swift in Sources */,
 				2AEACACB2199760D0030F064 /* event.swift in Sources */,
 				2AEACACD219976290030F064 /* Offer.swift in Sources */,
 				8D62BFB82192C8A7004A88DA /* OfferListViewController.swift in Sources */,
 				2AEACAC3219973690030F064 /* OffersTableViewController.swift in Sources */,
+				8D14E961219EDC4A009E28DE /* FaciliteListTableViewCell.swift in Sources */,
 				8D62BFCA2192CB0B004A88DA /* StoresListViewController.swift in Sources */,
 				2AE49FC8216421EE00F0B112 /* StoreViewController.swift in Sources */,
 				8D761DED218044F9001D6DEA /* RestaurantListViewController.swift in Sources */,
