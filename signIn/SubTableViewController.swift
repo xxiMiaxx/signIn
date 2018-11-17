@@ -106,7 +106,7 @@ class SubTableViewController: UITableViewController {
         
         tableView.tableFooterView = UIView()
         tableView.reloadData()
-        
+        tableView.allowsSelection=false
         observePosts()
         tableView.reloadData()
        // tableView.allowsSelection = false

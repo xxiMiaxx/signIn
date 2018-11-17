@@ -137,7 +137,7 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
                 
                 if wasExist {
                     print ("exist")
-                    let alert = UIAlertController(title: "", message: "EXIST", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "", message: "Sorry , that username already exist!", preferredStyle: .alert)
                     let action1 = UIAlertAction(title: "OK", style: .default, handler: { (action) in
                         print("Action")
                     })

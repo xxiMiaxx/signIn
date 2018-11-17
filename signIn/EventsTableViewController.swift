@@ -40,7 +40,7 @@ class EventsTableViewController: UITableViewController  {
         
         tableView.tableFooterView = UIView()
         tableView.reloadData()
-        
+        tableView.allowsSelection=false
         observePosts()
         tableView.reloadData()
         

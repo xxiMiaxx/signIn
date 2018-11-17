@@ -88,6 +88,7 @@ class Favorites : UITableViewController {
         
          self.tableView.tableFooterView = UIView()
          self.tableView.reloadData()
+        tableView.allowsSelection=false
     
          observePosts1()
         
@@ -157,6 +158,7 @@ class Favorites : UITableViewController {
             
             self.posts = tempPosts
             self.tableView.reloadData()
+            self.tableView.allowsSelection=false
             
             
         })

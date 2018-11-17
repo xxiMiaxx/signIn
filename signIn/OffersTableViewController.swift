@@ -47,7 +47,7 @@ class OffersTableViewController: UITableViewController  {
         tableView.tableFooterView = UIView()
         tableView.reloadData()
         
-      
+      tableView.allowsSelection=false
              tableView.reloadData()
     
         
