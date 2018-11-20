@@ -8,6 +8,7 @@ import MobileCoreServices
 import SDWebImage
 import NVActivityIndicatorView
 
+
 class AddOfferViewController: UIViewController, NVActivityIndicatorViewable {
     
     private var pickerController = UIImagePickerController()
@@ -43,7 +44,6 @@ class AddOfferViewController: UIViewController, NVActivityIndicatorViewable {
         self.dateView.isHidden = true
         
         dateformatter.dateFormat = "dd/MM/YYYY"
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -113,6 +113,7 @@ class AddOfferViewController: UIViewController, NVActivityIndicatorViewable {
                     self.txtSdate.text = value["Sdate"] as? String
                     self.txtEdate.text = value["Edate"] as? String
                     let OfferURL: String = value["photoURL"] as? String ?? ""
+                    
                     
                     guard OfferURL.count != 0 else {
                         return
@@ -264,6 +265,7 @@ class AddOfferViewController: UIViewController, NVActivityIndicatorViewable {
         else{
             uploadDataOnFirebase(with: "")
         }
+        
     }
     
     var timestamp: String = {

@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
-
+import UserNotifications
 
 class EventsTableViewController: UITableViewController  {
         let ref = Database.database().reference()
@@ -43,6 +43,25 @@ class EventsTableViewController: UITableViewController  {
         tableView.allowsSelection=false
         observePosts()
         tableView.reloadData()
+        
+        
+        //====
+        //Notifcation
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
+            
+            //   if()
+            
+        })
+        let content = UNMutableNotificationContent()
+        content.title = "Exclusive Events & Offers just for you"
+        content.subtitle = "Check out Riyadh Park amazing events !"
+        content.body = ""
+        content.badge = 1
+        
+        //define trigger
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         
         
     }
