@@ -8,6 +8,8 @@
 
 import Foundation
 import FirebaseDatabase
+import UserNotifications
+
 class OffersTableViewController: UITableViewController  {
         let ref = Database.database().reference()
     
@@ -17,7 +19,7 @@ class OffersTableViewController: UITableViewController  {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         observePosts()
-   
+        
         
     }
     override func viewDidLoad() {
@@ -49,7 +51,8 @@ class OffersTableViewController: UITableViewController  {
         
       tableView.allowsSelection=false
              tableView.reloadData()
-    
+        
+       
         
         
     }
