@@ -17,7 +17,7 @@
 		2A0D22BC21A84B4F00E320CC /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22BB21A84B4F00E320CC /* NewPostViewController.swift */; };
 		2A0D22BE21A9180F00E320CC /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22BD21A9180F00E320CC /* GlobalVariables.swift */; };
 		2A0D22C221A921E200E320CC /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22C121A921E200E320CC /* UserProfile.swift */; };
-		2A0D22C421A924FF00E320CC /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22C321A924FF00E320CC /* UserService.swift */; };
+		2A0D22C621A97D8B00E320CC /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22C521A97D8B00E320CC /* UserService.swift */; };
 		2A0FA3992192186B00399629 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FA3982192186B00399629 /* Favorites.swift */; };
 		2A20D423219EFA750050F078 /* PostTableViewCellFav.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A20D422219EFA750050F078 /* PostTableViewCellFav.xib */; };
 		2A20D425219EFAD10050F078 /* PostTableViewCellFav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20D424219EFAD10050F078 /* PostTableViewCellFav.swift */; };
@@ -55,6 +55,7 @@
 		2AEACACB2199760D0030F064 /* event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEACACA2199760D0030F064 /* event.swift */; };
 		2AEACACD219976290030F064 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEACACC219976280030F064 /* Offer.swift */; };
 		2AF868192190B10700509E66 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AF868172190B10700509E66 /* Model.xcdatamodeld */; };
+		3E21808C038EE238CA4AF202 /* Pods_signIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9EAA3B662E31FA6FB9FBDD /* Pods_signIn.framework */; };
 		8D14E95D219EDC41009E28DE /* AddFaciliteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E95C219EDC41009E28DE /* AddFaciliteViewController.swift */; };
 		8D14E95F219EDC45009E28DE /* FaciliteListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E95E219EDC45009E28DE /* FaciliteListModel.swift */; };
 		8D14E961219EDC4A009E28DE /* FaciliteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14E960219EDC4A009E28DE /* FaciliteListTableViewCell.swift */; };
@@ -108,7 +109,7 @@
 		2A0D22BB21A84B4F00E320CC /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		2A0D22BD21A9180F00E320CC /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		2A0D22C121A921E200E320CC /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		2A0D22C321A924FF00E320CC /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = /Users/arwahamed/Desktop/signIn/signIn/UserService.swift; sourceTree = "<absolute>"; };
+		2A0D22C521A97D8B00E320CC /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		2A0FA3982192186B00399629 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		2A20D422219EFA750050F078 /* PostTableViewCellFav.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCellFav.xib; sourceTree = "<group>"; };
 		2A20D424219EFAD10050F078 /* PostTableViewCellFav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCellFav.swift; path = signIn/PostTableViewCellFav.swift; sourceTree = SOURCE_ROOT; };
@@ -187,6 +188,7 @@
 				2A26F835219B5F04002C4B5F /* FirebaseDatabase.framework in Frameworks */,
 				2A26F837219B5F04002C4B5F /* FirebaseStorage.framework in Frameworks */,
 				2A99B4EE217E27BF00E32328 /* AdSupport.framework in Frameworks */,
+				3E21808C038EE238CA4AF202 /* Pods_signIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				8D788E852179C8720039123E /* Admin.storyboard */,
-				2A0D22C321A924FF00E320CC /* UserService.swift */,
 				2A8F26FF215ACBF90068D3EE /* AppDelegate.swift */,
 				8D761DE8218044E6001D6DEA /* AddDataViewController.swift */,
 				0D9DA8B321932DD800AB9A8D /* FacilitiesViewController.swift */,
@@ -276,6 +277,7 @@
 				2A8F270B215ACBFA0068D3EE /* Info.plist */,
 				2AE49FD02164AB2A00F0B112 /* storeService.swift */,
 				2A0FA3982192186B00399629 /* Favorites.swift */,
+				2A0D22C521A97D8B00E320CC /* UserService.swift */,
 			);
 			path = signIn;
 			sourceTree = "<group>";
@@ -504,7 +506,7 @@
 				8D62BFC22192CA8C004A88DA /* EventListTableViewCell.swift in Sources */,
 				2AEACACB2199760D0030F064 /* event.swift in Sources */,
 				2AEACACD219976290030F064 /* Offer.swift in Sources */,
-				2A0D22C421A924FF00E320CC /* UserService.swift in Sources */,
+				2A0D22C621A97D8B00E320CC /* UserService.swift in Sources */,
 				8D62BFB82192C8A7004A88DA /* OfferListViewController.swift in Sources */,
 				2AEACAC3219973690030F064 /* OffersTableViewController.swift in Sources */,
 				2A0D22BE21A9180F00E320CC /* GlobalVariables.swift in Sources */,
@@ -601,7 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
@@ -656,7 +658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;

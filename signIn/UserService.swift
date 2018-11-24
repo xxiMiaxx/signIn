@@ -1,8 +1,9 @@
 //
 //  UserService.swift
-//  
+//  signIn
 //
 //  Created by Arwa Hamed on 16/03/1440 AH.
+//  Copyright © 1440 Arwa Hamed. All rights reserved.
 //
 
 import Foundation
@@ -28,6 +29,5 @@ class UserService {
             
             completion(userProfile)
         })
+    }
 }
-}
-
