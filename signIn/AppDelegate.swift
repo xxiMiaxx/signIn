@@ -59,7 +59,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 window?.makeKeyAndVisible()
             }
         }
-
+/////////////////////////////////////////////////new
+        let authListener = Auth.auth().addStateDidChangeListener { auth, user in
+            
+            
+            
+            if user != nil {
+                
+                UserService.observeUserProfile(user!.uid) { userProfile in
+                    UserService.currentUserProfile = userProfile
+                }
+                //
+                
+            } else {
+                
+                
+                UserService.currentUserProfile = nil
+                
+                // menu screen
+               
+            }
+        }
+        
+/////////////////////////////////////////////////new
         return true
        
     }//end func application(_

@@ -10,6 +10,14 @@
 		0D4AC1DF2191A1F000AE8E0F /* NotifcationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AC1DE2191A1F000AE8E0F /* NotifcationsViewController.swift */; };
 		0D9DA8B421932DD800AB9A8D /* FacilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DA8B321932DD800AB9A8D /* FacilitiesViewController.swift */; };
 		0DE32E282173AAF1003CCA03 /* SearchFuncTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */; };
+		2A0D22B321A812ED00E320CC /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22B121A812ED00E320CC /* CommentTableViewCell.swift */; };
+		2A0D22B421A812ED00E320CC /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0D22B221A812ED00E320CC /* CommentTableViewCell.xib */; };
+		2A0D22B821A820DE00E320CC /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22B721A820DE00E320CC /* CommentsViewController.swift */; };
+		2A0D22BA21A8219E00E320CC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22B921A8219E00E320CC /* Comment.swift */; };
+		2A0D22BC21A84B4F00E320CC /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22BB21A84B4F00E320CC /* NewPostViewController.swift */; };
+		2A0D22BE21A9180F00E320CC /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22BD21A9180F00E320CC /* GlobalVariables.swift */; };
+		2A0D22C221A921E200E320CC /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22C121A921E200E320CC /* UserProfile.swift */; };
+		2A0D22C421A924FF00E320CC /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D22C321A924FF00E320CC /* UserService.swift */; };
 		2A0FA3992192186B00399629 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FA3982192186B00399629 /* Favorites.swift */; };
 		2A20D423219EFA750050F078 /* PostTableViewCellFav.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A20D422219EFA750050F078 /* PostTableViewCellFav.xib */; };
 		2A20D425219EFAD10050F078 /* PostTableViewCellFav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20D424219EFAD10050F078 /* PostTableViewCellFav.swift */; };
@@ -93,6 +101,14 @@
 		0D9DA8B321932DD800AB9A8D /* FacilitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesViewController.swift; sourceTree = "<group>"; };
 		0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFuncTableViewController.swift; sourceTree = "<group>"; };
 		0F9EAA3B662E31FA6FB9FBDD /* Pods_signIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A0D22B121A812ED00E320CC /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		2A0D22B221A812ED00E320CC /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		2A0D22B721A820DE00E320CC /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		2A0D22B921A8219E00E320CC /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		2A0D22BB21A84B4F00E320CC /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		2A0D22BD21A9180F00E320CC /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		2A0D22C121A921E200E320CC /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		2A0D22C321A924FF00E320CC /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = /Users/arwahamed/Desktop/signIn/signIn/UserService.swift; sourceTree = "<absolute>"; };
 		2A0FA3982192186B00399629 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		2A20D422219EFA750050F078 /* PostTableViewCellFav.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCellFav.xib; sourceTree = "<group>"; };
 		2A20D424219EFAD10050F078 /* PostTableViewCellFav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCellFav.swift; path = signIn/PostTableViewCellFav.swift; sourceTree = SOURCE_ROOT; };
@@ -201,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				8D788E852179C8720039123E /* Admin.storyboard */,
+				2A0D22C321A924FF00E320CC /* UserService.swift */,
 				2A8F26FF215ACBF90068D3EE /* AppDelegate.swift */,
 				8D761DE8218044E6001D6DEA /* AddDataViewController.swift */,
 				0D9DA8B321932DD800AB9A8D /* FacilitiesViewController.swift */,
@@ -228,6 +245,8 @@
 				2AEACAC42199755C0030F064 /* OffersTableViewCell.swift */,
 				2AEACAC6219975A50030F064 /* TableViewCell.swift */,
 				2AEACACC219976280030F064 /* Offer.swift */,
+				2A0D22B721A820DE00E320CC /* CommentsViewController.swift */,
+				2A0D22BD21A9180F00E320CC /* GlobalVariables.swift */,
 				8D14E95C219EDC41009E28DE /* AddFaciliteViewController.swift */,
 				8D14E95E219EDC45009E28DE /* FaciliteListModel.swift */,
 				2AEACAC8219975CD0030F064 /* TableViewCell.xib */,
@@ -241,6 +260,9 @@
 				0DE32E272173AAF1003CCA03 /* SearchFuncTableViewController.swift */,
 				8D788E872179C8860039123E /* CategoryViewController.swift */,
 				2AE49FD42167814200F0B112 /* SubTableViewController.swift */,
+				2A0D22B121A812ED00E320CC /* CommentTableViewCell.swift */,
+				2A0D22B221A812ED00E320CC /* CommentTableViewCell.xib */,
+				2A0D22BB21A84B4F00E320CC /* NewPostViewController.swift */,
 				2AE49FD2216741D400F0B112 /* StoresTableViewController.swift */,
 				2AE49FC7216421EE00F0B112 /* StoreViewController.swift */,
 				2AE49FC921642B2F00F0B112 /* Models */,
@@ -263,6 +285,8 @@
 			children = (
 				2AE49FCA21642B6C00F0B112 /* Post.swift */,
 				2AE49FCE2164AA0B00F0B112 /* storeProfile.swift */,
+				2A0D22B921A8219E00E320CC /* Comment.swift */,
+				2A0D22C121A921E200E320CC /* UserProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -364,6 +388,7 @@
 				2AEACAC9219975CD0030F064 /* TableViewCell.xib in Resources */,
 				8D788E862179C8720039123E /* Admin.storyboard in Resources */,
 				2A8F2705215ACBF90068D3EE /* Main.storyboard in Resources */,
+				2A0D22B421A812ED00E320CC /* CommentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +484,7 @@
 				2A8F2702215ACBF90068D3EE /* ViewController.swift in Sources */,
 				8D62BFCC2192D537004A88DA /* AddRestaurantViewController.swift in Sources */,
 				2AEACAB9219972390030F064 /* EventsTableViewController.swift in Sources */,
+				2A0D22C221A921E200E320CC /* UserProfile.swift in Sources */,
 				8D62BFB62192C89C004A88DA /* OfferListModel.swift in Sources */,
 				2AE49FCF2164AA0B00F0B112 /* storeProfile.swift in Sources */,
 				8D14E95F219EDC45009E28DE /* FaciliteListModel.swift in Sources */,
@@ -471,25 +497,31 @@
 				0D4AC1DF2191A1F000AE8E0F /* NotifcationsViewController.swift in Sources */,
 				8D62BFC82192CB04004A88DA /* StoresListTableViewCell.swift in Sources */,
 				0D9DA8B421932DD800AB9A8D /* FacilitiesViewController.swift in Sources */,
+				2A0D22BA21A8219E00E320CC /* Comment.swift in Sources */,
 				8D62BFBC2192CA5E004A88DA /* EventListModel.swift in Sources */,
 				8D14E95D219EDC41009E28DE /* AddFaciliteViewController.swift in Sources */,
 				8D14E963219EDC88009E28DE /* FaciliteListViewController.swift in Sources */,
 				8D62BFC22192CA8C004A88DA /* EventListTableViewCell.swift in Sources */,
 				2AEACACB2199760D0030F064 /* event.swift in Sources */,
 				2AEACACD219976290030F064 /* Offer.swift in Sources */,
+				2A0D22C421A924FF00E320CC /* UserService.swift in Sources */,
 				8D62BFB82192C8A7004A88DA /* OfferListViewController.swift in Sources */,
 				2AEACAC3219973690030F064 /* OffersTableViewController.swift in Sources */,
+				2A0D22BE21A9180F00E320CC /* GlobalVariables.swift in Sources */,
 				8D14E961219EDC4A009E28DE /* FaciliteListTableViewCell.swift in Sources */,
+				2A0D22B321A812ED00E320CC /* CommentTableViewCell.swift in Sources */,
 				8D62BFCA2192CB0B004A88DA /* StoresListViewController.swift in Sources */,
 				2AE49FC8216421EE00F0B112 /* StoreViewController.swift in Sources */,
 				8D761DED218044F9001D6DEA /* RestaurantListViewController.swift in Sources */,
 				2A8F2700215ACBF90068D3EE /* AppDelegate.swift in Sources */,
+				2A0D22BC21A84B4F00E320CC /* NewPostViewController.swift in Sources */,
 				0DE32E282173AAF1003CCA03 /* SearchFuncTableViewController.swift in Sources */,
 				2A0FA3992192186B00399629 /* Favorites.swift in Sources */,
 				8D761DEF21804509001D6DEA /* RestaurantListModel.swift in Sources */,
 				2AE49FC1216412A500F0B112 /* PostTableViewCell.swift in Sources */,
 				8D788E882179C8860039123E /* CategoryViewController.swift in Sources */,
 				2A99B4F0217E358B00E32328 /* ProtectedPageViewController.swift in Sources */,
+				2A0D22B821A820DE00E320CC /* CommentsViewController.swift in Sources */,
 				8D761DE9218044E6001D6DEA /* AddDataViewController.swift in Sources */,
 				8D62BFC42192CAF5004A88DA /* StoresListModel.swift in Sources */,
 				2AE49FCB21642B6C00F0B112 /* Post.swift in Sources */,

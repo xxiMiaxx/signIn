@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -269,6 +269,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="cac-bl-Jr3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cac-bl-Jr3" id="980-Tg-rQa">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="HAk-ak-gzV" kind="push" identifier="goToCommentsPage" id="ox0-SS-tYZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="qIU-ou-Z6A" id="P4x-QK-YEC"/>
                             <outlet property="delegate" destination="qIU-ou-Z6A" id="ch8-M5-J4I"/>
@@ -289,6 +302,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L5U-vg-pPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3713" y="-573"/>
+        </scene>
+        <!--Comments View Controller-->
+        <scene sceneID="ez7-Kn-rnA">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" id="HAk-ak-gzV" customClass="CommentsViewController" customModule="signIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p61-Uk-zEZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eHu-P0-FJr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dd9-Vg-KIN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="alb-ay-UKP">
+                            <connections>
+                                <action selector="handleAddCommentBtn:" destination="HAk-ak-gzV" id="3E6-g1-y7C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="12z-0S-tbM" kind="presentation" identifier="AddCommentPage2" id="KDm-eJ-Ewq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9UQ-HX-W1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4614" y="-573"/>
+        </scene>
+        <!--New Post View Controller-->
+        <scene sceneID="VrK-gr-Dd1">
+            <objects>
+                <viewController storyboardIdentifier="AddComment" id="oPx-BP-Ydm" customClass="NewPostViewController" customModule="signIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1IC-R5-Mtn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" usesAttributedText="YES" placeholder="Arwa" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOd-Xm-yje">
+                                <rect key="frame" x="23" y="83" width="329" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="329" id="eLa-1g-ICg"/>
+                                    <constraint firstAttribute="height" constant="500" id="xfr-La-MIV"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cOd-Xm-yje" firstAttribute="leading" secondItem="1IC-R5-Mtn" secondAttribute="leadingMargin" constant="7" id="AqM-O2-ieK"/>
+                            <constraint firstItem="SWe-XZ-8KM" firstAttribute="top" secondItem="cOd-Xm-yje" secondAttribute="bottom" constant="-519" id="P8J-uI-laR"/>
+                            <constraint firstItem="cOd-Xm-yje" firstAttribute="leading" secondItem="SWe-XZ-8KM" secondAttribute="trailing" constant="-352" id="lz3-zA-BYi"/>
+                            <constraint firstItem="cOd-Xm-yje" firstAttribute="top" secondItem="SWe-XZ-8KM" secondAttribute="top" constant="19" id="vhJ-SH-6Wd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SWe-XZ-8KM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gby-Hp-V2L">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="f89-W1-inu">
+                            <connections>
+                                <action selector="handleCancelBtn:" destination="oPx-BP-Ydm" id="sSg-fE-EFd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xlg-Do-qsO">
+                            <connections>
+                                <action selector="handlePostBtn:" destination="oPx-BP-Ydm" id="of1-MI-NBR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelBtn" destination="f89-W1-inu" id="Ozs-Uh-bFF"/>
+                        <outlet property="commentLable" destination="cOd-Xm-yje" id="oya-wc-clC"/>
+                        <outlet property="doneBtn" destination="xlg-Do-qsO" id="0aV-r3-FBv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3l-za-vdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6376.8000000000002" y="-573.46326836581716"/>
         </scene>
         <!--Stores-->
         <scene sceneID="YSq-8d-zyc">
@@ -642,6 +729,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNI-IL-cH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-218.40000000000001" y="523.98800599700155"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iG6-j1-nPh">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGo-VF-ZDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="AddCommentPage" automaticallyAdjustsScrollViewInsets="NO" id="12z-0S-tbM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="yro-0i-Jmw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IuL-bz-QfO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oPx-BP-Ydm" kind="relationship" relationship="rootViewController" id="5Ij-r6-Jea"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="5437.6000000000004" y="-573.46326836581716"/>
         </scene>
     </scenes>
     <resources>

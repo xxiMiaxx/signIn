@@ -16,7 +16,8 @@ class SubTableViewController: UITableViewController {
     
     //var Favorites:Favorites?
     var link: PostTableViewCell?
-    
+    var link2: CommentsViewController?
+    var selectedCell:String?
     func someMethodIWantToCall(cell: UITableViewCell) {
        
         let indexPathTapped = tableView.indexPath(for: cell)
@@ -106,10 +107,10 @@ class SubTableViewController: UITableViewController {
         
         tableView.tableFooterView = UIView()
         tableView.reloadData()
-        tableView.allowsSelection=false
+        //tableView.allowsSelection=false
         observePosts()
         tableView.reloadData()
-       // tableView.allowsSelection = false
+       // tableView.allowsSelection = falseh
        
         
     }
@@ -243,5 +244,24 @@ class SubTableViewController: UITableViewController {
     }
     
     
-
+//new
+    //to grab a row, update your did select row at index path method to:
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       // self.selectedCell = posts[indexPath.row].name as!String
+       // print(self.selectedCell)
+        self.selectedCell = posts[indexPath.row].name
+        link2?.navigationItemTitle =  self.selectedCell
+        print(self.selectedCell as Any)
+        
+        let title = self.selectedCell! + " " + "Reviews"
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as! CommentsViewController
+            myVC.navigationItem.title =  title
+            navigationController?.pushViewController(myVC, animated: true)
+            //self.performSegue(withIdentifier: "goToCommentsPage", sender: self)
+        
+    }
+    
+    
+    
 }
