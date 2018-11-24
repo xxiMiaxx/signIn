@@ -22,7 +22,7 @@ struct AdminInfo {
 //class AppDelegate: UIResponder, UIApplicationDelegate  {
 
 //=======
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate , UITextFieldDelegate{
     
  
     

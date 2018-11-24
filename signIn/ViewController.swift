@@ -11,7 +11,7 @@ import FirebaseAuth
 import Firebase
 import GoogleSignIn
 
-class ViewController: UIViewController , GIDSignInUIDelegate   {
+class ViewController: UIViewController , GIDSignInUIDelegate ,UITextFieldDelegate  {
     
     
     var userNameArray = [String]()
@@ -293,6 +293,22 @@ class ViewController: UIViewController , GIDSignInUIDelegate   {
         return wasExist
         ///////user Name END
         
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.emailTextField.delegate = self
+        self.confirmPassTextField.delegate=self
+        self.passwordTextField.delegate = self
+        self.userNameTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
     }
     
 }
