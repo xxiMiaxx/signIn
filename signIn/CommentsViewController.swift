@@ -52,7 +52,7 @@ class CommentsViewController: UIViewController , UITableViewDelegate, UITableVie
         tableView.reloadData()
         observePosts()
         tableView.reloadData()
-        tableView.allowsSelection=false
+        //tableView.allowsSelection=false
         
     }
     
