@@ -336,7 +336,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" usesAttributedText="YES" placeholder="Arwa" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOd-Xm-yje">
+                            <textField opaque="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" usesAttributedText="YES" placeholder="Share your experience at this place" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOd-Xm-yje">
                                 <rect key="frame" x="23" y="83" width="329" height="500"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="329" id="eLa-1g-ICg"/>
